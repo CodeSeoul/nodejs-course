@@ -8,6 +8,6 @@
 	- https://www.freecodecamp.com/challenges/comment-your-javascript-code
 
 ## Syllabus
-- Lesson 1 : Intro to Node.js
+- [Lesson 1 : Intro to Node.js](/lesson1/)
 
 > To be updated as I work on lesson details
