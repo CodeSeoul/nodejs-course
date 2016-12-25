@@ -1,4 +1,4 @@
-# Lesson 2 : HTTP
+# Lesson 2: HTTP
 
 ## What is HTTP Server?
 HTTP server listens or waits for requests from clients and return responses.
@@ -38,4 +38,13 @@ Server running at http://localhost:8080
 
 Open `http://localhost:8080` in any browser and observe the result.
 
+Or use the `curl` command on the terminal
+```bash
+$ curl http://localhost:8080
+Hello, World!
+```
+
 Now, we have our first HTTP server up and running which is responding to all the HTTP requests at port 8080.
+
+## Challenges
+- Create a HTTP server which always returns 0 to 9.
