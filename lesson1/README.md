@@ -1,4 +1,4 @@
-# Lesson 1 : Intro
+# Lesson 1: Intro
 
 ## JavaScript History
 - Used to run only on browsers
@@ -46,7 +46,12 @@ $ node
 3
 > 'Hello, ' + 'Node.js!'
 'Hello, Node.js!'
+> console.log('Hello, World!')
+'Hello, World!'
+> window.alert('abc');
+ReferenceError: window is not defined
 ```
+
 - Run code in a file
 Write [hello.js](hello.js).
 ```js
@@ -63,25 +68,6 @@ Hello, World!
 - [Atom](https://atom.io)
 - [Bracket](http://brackets.io)
 
-## Our First Web Server
-- [webserver.js](webserver.js)
-```js
-const http = require('http');
-const port = 8000;
 
-http.createServer((req, res) => {
-  res.end('Hello World\n');
-}).listen(port, () => {
-  console.log('Server running at http://localhost:' + port);
-});
-```
-- Run
-```
-$ node webserver.js
-Server running at http://localhost:8000
-```
-- Test
-```
-$ curl http://127.0.0.1:8000
-Hello World
-```
+## Challeges
+- print 0 to 9 using the `for` loop

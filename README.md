@@ -8,7 +8,8 @@
 	- https://www.freecodecamp.com/challenges/comment-your-javascript-code
 
 ## Syllabus
-- [Lesson 1 : Intro](/lesson1/)
-- [Lesson 2 : HTTP](/lesson2/)
+- [Lesson 1: Intro](/lesson1/)
+- [Lesson 2: HTTP](/lesson2/)
+- [Lesson 3: Events](/lesson3/)
 
 > To be updated as I work on lesson details
