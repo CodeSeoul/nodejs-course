@@ -1,6 +1,4 @@
-# Lesson 1
-
-> Intro to Node.js
+# Lesson 1 : Intro
 
 ## JavaScript History
 - Used to run only on browsers
@@ -8,15 +6,29 @@
 - Limitation
 
 ## What is Node.js?
-- Back-end version JavaScript
-- Allows you to build scalable network applications using JavaScript.
-- It's very fast because it's mostly C code.
+Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
+Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
+Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
+- Server-side(back-end) version JavaScript
+- Allows you to build scalable network applications using JavaScript
+- Very fast because it's mostly C code
+- Built on Google Chrome's JavaScript Engine (V8 Engine)
+- Node.js = Runtime Environment + JavaScript Library
+- Website
+	- English : https://nodejs.org/en/
+	- Korean : https://nodejs.org/ko/
+
+## Why is Node.js so popular?
+- Full-stack development with a single language
+- Start-ups can't afford many developers
 
 ## What could you build?
-- Websocket server (like a chat server)
-- Fast File Upload Client
-- Ad Server
-- Any Real-Time Data Apps
+I/O intensive web applications
+- Data Intensive Real-time Applications (DIRT)
+- Data Streaming Applications (Music, Video)
+- JSON APIs based Applications
+- Websocket Server (like a chat server)
+- Single Page Applications
 
 ## How to install Node.js
 - Download [here](https://nodejs.org/en/download)
@@ -36,17 +48,14 @@ $ node
 'Hello, Node.js!'
 ```
 - Run code in a file
-	- [hello.js](hello.js)
+Write [hello.js](hello.js).
 ```js
-var name = 'Node.js';
-var message = 'Hello, ' + name + '!';
-console.log(message);
+console.log('Hello, World!');
 ```
-
-	- Run
+Just run it!
 ```js
 $ node hello.js
-Hello, Node.js!
+Hello, World!
 ```
 
 ## What's your IDE of choice?
