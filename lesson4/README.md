@@ -33,7 +33,7 @@ server.on('request', function(req, res) {
 ## Let's Create an Echo Server!
 
 Write to the `response` just like printing to the console.
-[echoServer1.js](echoServer1.js)
+- [echoServer1.js](echoServer1.js)
 ```js
 server.on('request', function(req, res) {
 	req.on('readable', function() {
@@ -50,7 +50,7 @@ server.on('request', function(req, res) {
 ```
 
 Instead, use the convinient Streams API, `readable.pipe(writable)`
-[echoServer2.js](echoServer2.js)
+- [echoServer2.js](echoServer2.js)
 ```js
 server.on('request', function(req, res) {
 	req.pipe(res);
