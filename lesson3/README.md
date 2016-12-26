@@ -114,20 +114,20 @@ http.createServer(function(req, res){ ... });
 ```
 
 ### http.createServer([requestListener])
-https://nodejs.org/api/http.html#http_http_createserver_requestlistener
+- https://nodejs.org/api/http.html#http_http_createserver_requestlistener
 Returns a new instance of `http.Server`.
 The requestListener is a function which is automatically added to the 'request' event.
 
 ### Class: http.Server
-https://nodejs.org/api/http.html#http_event_request
+- https://nodejs.org/api/http.html#http_event_request
 This class inherits from net.Server.
 
 ### Class: net.Server
-https://nodejs.org/api/net.html#net_class_net_server
+- https://nodejs.org/api/net.html#net_class_net_server
 net.Server is an EventEmitter.
 
 ### Event: 'request'
-https://nodejs.org/api/http.html#http_event_request
+- https://nodejs.org/api/http.html#http_event_request
 Emitted each time there is a request.
 
 ## Alternate Syntax
