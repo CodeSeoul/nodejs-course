@@ -11,8 +11,8 @@
 - [Lesson 1: Intro](/lesson1/)
 - [Lesson 2: HTTP](/lesson2/)
 - [Lesson 3: Events](/lesson3/)
-- [Lesson 4: Streams](/lesson4/)
-- Lesson 5: File System
+- [Lesson 4: File I/O](/lesson4/)
+- [Lesson 5: Streams](/lesson5/)
 - Lesson 6: Modules
 
 > To be updated as I work on lesson details
