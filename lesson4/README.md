@@ -65,7 +65,24 @@ Program Ended
 Asynchronous read: Learn Teach Code Seoul
 ```
 
+## Blocking vs Non-blocking
 
+### Blocking Code
+Execution continues and the callback method will be invoked later when the data is ready
+```
+Read file from Filesystem, set equal to "contents"
+Print contents
+Do something else
+```
 
+### Non-blocking Code
+Execution stops until reading complets
+```
+Read file from Filesystem
+  whenever you’re complete, print the contents
+Do Something else
+```
 
-
+## Challenges
+[Convert Blocking](challeges/convertBlocking.js)
+[Copy File](challeges/copyFile.js)
