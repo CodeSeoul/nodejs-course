@@ -33,6 +33,6 @@ var http = require('http');
 var fs = require('fs');
 http.createServer((req, res) => {
   res.writeHead(200, {'Content-type': 'image/png'});
-  fs.createReadStream('image.png').pipe(res);
+  fs.createReadStream('ltcs.png').pipe(res);
 }).listen(3000);
 ```
