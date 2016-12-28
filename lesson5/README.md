@@ -37,11 +37,11 @@ Writable streams expose methods such as write() and end() that are used to write
 
 ## Piping Streams
 > It'is the most recommended way when we use Steram APIs.
+
 The `readable.pipe()` method attaches a Writable stream to the readable, causing it push all of its data to the attached Writable.
 
 ## Streams in File System
 This is another way to read/write a file.
-
 
 `fs.createReadStream(path)` returns a new readable stream object from a file.
 ```js
@@ -54,7 +54,7 @@ file.on('end', () => {
 })
 ```
 
-`fs.createWriteStream(path) returns a new writable stream object from a file.
+`fs.createWriteStream(path)` returns a new writable stream object from a file.
 ```js
 var fs = require('fs');
 
