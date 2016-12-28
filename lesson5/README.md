@@ -1,10 +1,12 @@
-# Lesson5: Streams
+# Lesson 5: Streams
 
 > Almost all Node.js applications, no matter how simple, use streams in some manner.
 
 ## What are Streams?
 
 Streams can be readable, writable, or *both* using buffers in memory.
+
+You can think of queue, the famous data structure.
 
 ### Anology
 
