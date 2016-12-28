@@ -4,9 +4,14 @@
 
 ## What are Streams?
 
-Streams can be readable, writable, or both.
+Streams can be readable, writable, or *both* using buffers in memory.
 
-### Streams vs Arrays
+### Anology
+
+- Streaming music VS. Downloading MP3 files
+- YouTube VS. Downloading video clips.
+
+### Streams VS. Arrays
 
 You can think of streams ab being like arrays, but...
 - Arrays: having data distributed *over space*
@@ -60,6 +65,9 @@ file.on('end', () => {
 	console.log('There will be no data.')
 })
 ```
+
+A `data` event is fired whenever a new chunk of data is ready, and `end` event is fired when all the chunks have been loaded.
+A chunck can vary in size, depending on type of data.
 
 `fs.createWriteStream(path)` returns a new writable stream object from a file.
 ```js
