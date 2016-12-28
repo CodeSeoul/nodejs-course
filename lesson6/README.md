@@ -28,6 +28,9 @@ server.listen(3000);
 ## Mime-types
 
 ### Image Server
+
+Streams an image to a client.
+
 ```js
 var http = require('http');
 var fs = require('fs');
@@ -36,3 +39,5 @@ http.createServer((req, res) => {
   fs.createReadStream('ltcs.png').pipe(res);
 }).listen(3000);
 ```
+
+In this one-liner, the data is read in from the file and it sent out to the client as it comes in.
