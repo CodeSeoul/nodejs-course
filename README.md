@@ -9,10 +9,11 @@
 
 ## Syllabus
 - [Lesson 1: Intro](/lesson1/)
-- [Lesson 2: HTTP](/lesson2/)
+- [Lesson 2: HTTP Basic](/lesson2/)
 - [Lesson 3: Events](/lesson3/)
 - [Lesson 4: File I/O](/lesson4/)
 - [Lesson 5: Streams](/lesson5/)
-- Lesson 6: Modules
+- [Lesson 6: HTTP](/lesson6/)
+- Lesson 7: Modules
 
 > To be updated as I work on lesson details
