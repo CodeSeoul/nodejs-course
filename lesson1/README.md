@@ -95,5 +95,11 @@ Hello, World!
 - [Atom](https://atom.io)
 - [Bracket](http://brackets.io)
 
+## Summary
+Node.js is
+- Built on JavaScript
+- Evented and asynchronous
+- Desigend for data-intensive real-time applications
+
 ## Challeges
 - print 0 to 9 using the `for` loop
