@@ -2,6 +2,8 @@
 
 > This course teaches you how to write server-side applications with JavaScript using Node.js.
 
+![logo](logo.png)
+
 ## Prerequisites
 - Basic understanding of JavaScript
 	- https://github.com/LearnToCodeSeoul/basic_programming_examples/tree/master/javascript
