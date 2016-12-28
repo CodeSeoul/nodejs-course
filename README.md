@@ -17,6 +17,7 @@
 - [Lesson 5: Streams](/lesson5/)
 - [Lesson 6: HTTP](/lesson6/)
 - Lesson 7: Modules
+- Lesson 8: Express
 
 > To be updated as I work on lesson details
 
