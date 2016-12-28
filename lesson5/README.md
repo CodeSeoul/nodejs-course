@@ -132,5 +132,5 @@ hello
 ```
 
 ## Challenges
-[Pipe Files](challenges/pipeFiles.js)
-[Download Server](challenges/downloadServer.js)
+- [Pipe Files](challenges/pipeFiles.js)
+- [Download Server](challenges/downloadServer.js)
