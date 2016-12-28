@@ -138,6 +138,11 @@ server.on('request', function(req, res) { ... });
 server.on('close', function(req, res) { ... });
 ```
 
+## Event-Driven Programming
+In an event-driven application, there is generally a main loop that listens for events, 
+and then triggers a callback function when one of those events is detected.
+![Event Loop](event_loop.jpg)
+
 ## Challenges
 - [Chat Emitter](challenges/chatEmitter.js)
 - [Refactor HTTP server](challenges/refactorHttpServer.js)

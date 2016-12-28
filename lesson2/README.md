@@ -16,6 +16,7 @@ var http = require('http');
 Use the created http instance and call `http.createServer()` method to create a server instance.
 Bind it at port 8080 using the `listen` method associated with the server instance. 
 Pass it a function with parameters request and response.
+Start the event loop. (checking for events)
 ```js
 var server = http.createServer(function(req, res) {
    res.end('Hello, World!'); // Send the response body as "Hello, World!"
