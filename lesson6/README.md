@@ -24,3 +24,15 @@ server.on('request', (req, res) => {
 });
 server.listen(3000);
 ```
+
+## Mime-types
+
+### Image Server
+```js
+var http = require('http');
+var fs = require('fs');
+http.createServer((req, res) => {
+  res.writeHead(200, {'Content-type': 'image/png'});
+  fs.createReadStream('image.png').pipe(res);
+}).listen(3000);
+```
