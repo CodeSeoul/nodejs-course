@@ -28,6 +28,14 @@ Node.js' package ecosystem, npm, is the largest ecosystem of open source librari
 	- English : https://nodejs.org/en/
 	- Korean : https://nodejs.org/ko/
 
+## What is Node.js NOT?
+- A Web Framework
+	- Node.js is a platform for JavaScript applications, and it's not to be confused with a framework.
+	- It's a common misconception to think of Node.js as Rails or Django for JavaScript, whereas it's much lower level.
+	- We'll talk about a popular frameowork for Node.js called Express.js later.
+- Multi-threaded
+	- You can think of it as a single threaded server.
+
 ## Built on JavaScript
 - Used to run only on browsers
 - Cross Platform(O/S)
