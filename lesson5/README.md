@@ -3,7 +3,14 @@
 > Almost all Node.js applications, no matter how simple, use streams in some manner.
 
 ## What are Streams?
-Streams can be readable, writable, or both
+
+Streams can be readable, writable, or both.
+
+### Streams vs Arrays
+
+You can think of streams ab being like arrays, but...
+- Arrays: having data distributed *over space*
+- Streams: having data distributed *over time*
 
 ## Types of Streams
 There are four fundamental stream types within Node.js
