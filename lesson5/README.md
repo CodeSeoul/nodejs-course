@@ -4,9 +4,7 @@
 
 ## What are Streams?
 
-Streams can be readable, writable, or *both* using buffers in memory.
-
-You can think of queue, the famous data structure.
+Streams can be readable, writable, or *both* using buffers (a sort of queue) in memory.
 
 ### Anology
 
