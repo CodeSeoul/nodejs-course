@@ -2,7 +2,7 @@
 
 > This course teaches you how to write server-side applications with JavaScript using Node.js.
 
-![logo](logo.png)
+![nodejs-logo](nodejs-logo.png)
 
 ## Prerequisites
 - Basic understanding of JavaScript
