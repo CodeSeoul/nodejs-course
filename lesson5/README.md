@@ -50,6 +50,10 @@ Writable streams expose methods such as write() and end() that are used to write
 ## Piping Streams
 > It'is the most recommended way when we use Steram APIs.
 
+Readable and writable streams can be connected to make pipes, much like you can do with the `|` operator in shell scripting.
+
+This provies an efficient way to write out data as soon as it's ready, without wating for the complete resource to be read adn the written out.
+
 The `readable.pipe()` method attaches a Writable stream to the readable, causing it push all of its data to the attached Writable.
 
 ## Streams in File System
