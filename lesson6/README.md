@@ -25,7 +25,13 @@ server.on('request', (req, res) => {
 server.listen(3000);
 ```
 
-## Mime-types
+## MIME TYPES
+
+When serving files via HTTP, it's usually not enough to just send the contents of a file;
+You also should include the type of file being sent.
+This is done by setting the `Content-Type` HTTP header with the proper MIME type for the file.
+
+MIME types are dicussed in detail in the [Wikipedica article](https://en.wikipedia.org/wiki/MIME).
 
 ### Image Server
 
