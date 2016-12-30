@@ -34,7 +34,13 @@ var some_module = require('/Users/dale/some_module');
 Look in the **node_modules** directory
 
 ```js
-var make_request = require('some_module');
+var thrid_party_module = require('thrid_party_module');
+```
+
+Built-in module (such as `http`, `fs`, `event`, `stream`)
+
+```js
+var built_in_module = require('built-in-module');
 ```
 
 ## Export Our Own Modules
