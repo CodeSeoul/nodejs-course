@@ -15,3 +15,5 @@ Opening and closing connections takes time, and the size of the data transfer is
 ## Alterntive: WebSokect
 
 WebSocket was designed as a bidirectional lightweight communications protocol to support real-time communication.
+
+HTLM5-compliant browsers support WebSocket!
