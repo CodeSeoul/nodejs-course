@@ -131,6 +131,14 @@ Install into the local *node_modules* directory (./node_modules/connect)
 $ npm install
 ```
 
+## Doing them at once
+
+Install a module adding it to package.json at the same time
+
+```bash
+$ npm install --save connect
+```
+
 ## Challenges
 
 - [Highfive](challenges/high_five.js)
