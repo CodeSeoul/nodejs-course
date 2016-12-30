@@ -133,4 +133,9 @@ $ npm install
 
 ## Challenges
 
-- [Highfive](challenges/app.js)
+- [Highfive](challenges/high_five.js)
+- [LogLevel](challenges/logger.js)
+- Installing Local Modules
+	: Practice using NPM by installing the npm module `underscore` using the `npm` command.
+- [Dependency](challenges/package.json)
+
