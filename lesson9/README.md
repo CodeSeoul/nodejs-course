@@ -1,6 +1,6 @@
 # Lesson 9: Socket.io
 
-## Limitations on Ajax for chatting
+## Limitations on Ajax for messaging
 
 To handle chat-related messaging, you could poll the server with Ajax.
 
