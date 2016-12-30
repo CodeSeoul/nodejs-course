@@ -86,3 +86,47 @@ myMod.foo();
 myMod.bar();
 ```
 
+## NPM (Node Package Manager)
+
+- Comes with node
+- Module Repository
+- Dependency Management
+- Easily publish modules
+
+## Finding modules
+
+- Website (http://npmjs.org)
+
+## Installing a NPM Module
+
+Install into the local *node_modules* directory
+
+```bash
+$ npm install request
+```
+
+Load from the lccal *mode_modules* directory
+
+```js
+var request = require('request');
+```
+
+## Defining Your Dependencies
+
+Udpate package.json
+
+```js
+{
+  "name": "My App",
+  "version": "1",
+  "dependencies": {
+    "connect": "1.8.7"
+  }
+}
+```
+
+Install into the local *node_modules* directory (./node_modules/connect)
+
+```bash
+$ npm install
+```
