@@ -1,6 +1,6 @@
 # Lesson 7: Modules
 
-## We've seen...
+## We've seen only built-in modules
 
 ```js
 var http = require('http');
@@ -34,13 +34,7 @@ var some_module = require('/Users/dale/some_module');
 Look in the **node_modules** directory
 
 ```js
-var thrid_party_module = require('thrid_party_module');
-```
-
-Built-in module (such as `http`, `fs`, `event`, `stream`)
-
-```js
-var built_in_module = require('built-in-module');
+var some_module = require('some_module');
 ```
 
 ## Export Our Own Modules
@@ -94,10 +88,9 @@ myMod.bar();
 
 ## NPM (Node Package Manager)
 
-- Comes with node
-- Module Repository
-- Dependency Management
-- Easily publish modules
+The Node Package Manager is a utility that comes bundled with Node.js.
+
+It allows you to easily install third-party modules and globally publish any Node.js modules you yourself create.
 
 ## Finding modules
 
@@ -117,25 +110,32 @@ Load from the lccal *mode_modules* directory
 var request = require('request');
 ```
 
-## Defining Your Dependencies
+## Specifing Dependencies
 
-Udpate package.json
+Application dependencies are specified using a `package.json` file also known as a package descriptor file.
+
+This file is always placed in an application's root directory and specify the name of your application, the version and a description of what the application does as well as the application's dependencies.
 
 ```js
 {
   "name": "My App",
-  "version": "1",
+  "version": "0.0.1",
+  "description": "Simple HTTP server"
   "dependencies": {
     "connect": "1.8.7"
   }
 }
 ```
 
-Install into the local *node_modules* directory (./node_modules/connect)
+NPM reads dependencies from package.json files and install each of them with a single command.
+
+Enter the following command in the root of your application directory.
 
 ```bash
 $ npm install
 ```
+
+There should be a newly created `node_modules` directory which contains your application's dependencies.
 
 ## Doing them at once
 
