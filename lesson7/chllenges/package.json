@@ -1,0 +1,7 @@
+// Add two dependencies to our package.json file, connect and underscore. 
+// We'll want to use version 2.1.1 of connect and version 1.3.3 of underscore.
+
+{
+  "name": "My Awesome Node App",
+  "version": "1"
+}
