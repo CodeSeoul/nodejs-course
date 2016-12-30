@@ -18,6 +18,7 @@
 - [Lesson 6: HTTP](/lesson6/)
 - [Lesson 7: Modules](/lesson7/)
 - [Lesson 8: Express.js](/lesson8/)
+- [Lesson 9: Socket.io](/lesson9/)
 
-> To be updated as I work on lesson details
+> To be updated as I work on the lesson details
 
