@@ -130,3 +130,7 @@ Install into the local *node_modules* directory (./node_modules/connect)
 ```bash
 $ npm install
 ```
+
+## Challenges
+
+- [Highfive](challenges/app.js)
