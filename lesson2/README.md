@@ -1,5 +1,9 @@
 # Lesson 2: HTTP
 
+> Don't worry if the details in this lesson seem over your head.
+
+> I'd like to give you a preview of what you'll be to do when you've completed the course.
+
 ## What is HTTP Server?
 HTTP server listens or waits for requests from clients and return responses.
 
