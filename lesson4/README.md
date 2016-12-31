@@ -1,5 +1,7 @@
 # Lesson 4: File I/O
 
+> Built-in fs module which provides filesystem-related functionality
+
 ## How to import the required module
 The Node.js File System (fs) module can be imported using the following syntax.
 ```js
