@@ -19,5 +19,8 @@
 - [Lesson 7: Modules](/lesson7/)
 - Lesson 8: Express
 
+## Schedule
+- [1st Meetup on Jan 14](https://www.meetup.com/Learn-To-Code-Seoul/events/236563042/)
+
 > To be updated as I work on lesson details
 
