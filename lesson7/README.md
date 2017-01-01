@@ -1,5 +1,10 @@
 # Lesson 7: Modules
 
+> We can keep code organized and packaged for easy resue.
+
+When creating an application, you often reach a point where putting all of your code in a single file becomes unwieldy.
+When this happends, the conventional approach is to take a file containing a lot of code and try to organize it by grouping related logic and moving it into separate files.
+
 ## We've seen only built-in modules
 
 ```js
@@ -37,54 +42,95 @@ Look in the **node_modules** directory
 var some_module = require('some_module');
 ```
 
-## Export Our Own Modules
+## Creating Modules
 
-custom_hello.js
+Modules can either be single files or directories containing one or more files.
+
+If a module is a directory, the file in the module directory that will be evaluated is normally named index.js.
+
+- ./my_module.js
+- ./my_module/index.js
+
+## Exporting Modules
+
+Node modules allow you to select what functions and variables from the included file are exposed.
+
+- Expose a single function or variable by setting the property `module.exports`.
+- Expose multiple functions or varaiables by setting the properties of `exports`.
+
+### Export Multiple Functions
+
+- currency-functions.js
+
 ```js
-var hello = function() {
-  console.log("hello!");
+var canadianDollar = 0.91
+
+function roundTwoDecimals(amount) {
+	return Math.round(amount * 100) / 100;
 }
-module.exports = hello;
+
+var canadianToUs = function(canadian) {
+	return roundTwoDecimals(canadian * canadianDollar);
+};
+
+var usToCanadian = function(us) {
+	return roundTwoDecimals(us / canadianDollar);
+};
+
+exports.canadianToUs = canadianToUs;
+exports.usToCanadian = usToCanadian;
 ```
 
-custom_bye.js
+- test-currency-functions.js
+
 ```js
-exports.goodbye = function() {
-  console.log("bye!");
+var currency = require('./currency-functions');
+
+console.log('50 Canadian dollars equals this amount of US dollars:');
+console.log(currency.canadianToUs(50));
+
+console.log('30 US dollars equals this amount of Canadian dollars:');
+console.log(currency.usToCanadian(30));
+```
+
+### Export a Single Class
+
+- currency-class.js
+
+```js
+var Currency = function(canadianDollar) {
+	this.canadianDollar = canadianDollar;
+};
+
+Currency.prototype.roundTwoDecimals = function(amount) {
+	return Math.round(amount * 100) / 100;
+};
+
+Currency.prototype.canadianToUs = function(canadian) {
+	return this.roundTwoDecimals(canadian * this.canadianDollar);
 }
+
+Currency.prototype.usToCanadian = function(us) {
+	return this.roundTwoDecimals(us / this.canadianDollar);
+}
+
+module.exports = Currency;
 ```
 
-app.js
+- test-currency-class.js
+
 ```js
-var hello = require('./custom_hello');
-var bye = require('./custom_bye');
-hello();
-bye.goodbye();
+var Currency = require('./currency-class');
+
+var currency = new Currency(0.91);
+
+console.log('50 Canadian dollars equals this amount of US dollars:');
+console.log(currency.canadianToUs(50));
+
+console.log('30 US dollars equals this amount of Canadian dollars:');
+console.log(currency.usToCanadian(30));
 ```
 
-If we only need to call once
-```js
-require('./custom_goodbye').goodbye();
-```
-
-## Export Multiple Functions
-
-my_module.js
-```js
-var foo = function() {...};
-var bar = function() {...};
-var baz = function() {...};
-
-exports.foo = foo;
-exports.bar = bar;
-```
-
-app.js
-```js
-var myMod = require('./my_module');
-myMod.foo();
-myMod.bar();
-```
 
 ## NPM (Node Package Manager)
 

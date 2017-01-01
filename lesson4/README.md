@@ -44,6 +44,8 @@ fs.readFile('ltcs.txt', function(err, data) {
 - Every method in the fs module has synchronous as well as asynchronous forms. 
 - Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error. 
 - It is better to use an asynchronous method instead of a synchronous method, as the former never blocks a program during its execution, whereas the second one does.
+- Asynchronous programming will likely take some time to grasp and master.
+- It requires a paradigm shift in terms of thinking about how application logic should execute.
 
 [syncVsAsync.js.js](syncVsAsync.js.js)
 ```js
