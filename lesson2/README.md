@@ -23,7 +23,7 @@ It accepts a single argument, a callback function, that will be called on each H
 This callback function recevies, as arguments, the request and response objects, which are commonly shortened to `req` and `res`.
 ```js
 var server = http.createServer(function(req, res) {
-   res.end('Hello, LTCS!'); // Send the response body as "Hello, LTCS!"
+   res.end('Hello, World!'); // Send the response body as "Hello, World!"
 });
 ```
 
@@ -49,7 +49,7 @@ Open `http://localhost:8080` in any browser and observe the result.
 Or use the `curl` command on the terminal
 ```bash
 $ curl http://localhost:8080
-Hello, LTCS!
+Hello, World!
 ```
 
 Now, we have our first HTTP server up and running which is responding to all the HTTP requests at port 8080.
