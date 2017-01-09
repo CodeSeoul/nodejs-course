@@ -71,6 +71,8 @@ var hello = (name) => {
 ### The `EventEmitter` class in `events` module
 
 Event emitter fire events and include the ability to handle those events when triggerered.
+Events are handled throught the use of listeners.
+A listener is the association of an event with a callback function that gets triggered each time the event occurs.
 
 - `emitter.on(eventName, listener)`: Attaches the `listener` function for the event named `eventName`.
 - `emitter.emit(eventName[, ...args])`: Triggers each of the listeners registered for the event named `eventName`, passing the supplied arguments to each. Returns true if the event had listeners, false otherwise.
