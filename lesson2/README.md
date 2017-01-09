@@ -24,7 +24,7 @@ This callback function recevies, as arguments, the request and response objects,
 
 ```js
 var server = http.createServer(function(req, res) {
-   res.end('Hello, World!'); // Send the response body as "Hello, World!"
+   res.end('Hello, World!'); // End the response with the message, "Hello, World!"
 });
 ```
 
