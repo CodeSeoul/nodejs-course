@@ -69,6 +69,9 @@ var hello = (name) => {
 - Any values returned by the called listeners are ignored and will be discarded.
 
 ### The `EventEmitter` class in `events` module
+
+Event emitter fire events and include the ability to handle those events when triggerered.
+
 - `emitter.on(eventName, listener)`: Attaches the `listener` function for the event named `eventName`.
 - `emitter.emit(eventName[, ...args])`: Triggers each of the listeners registered for the event named `eventName`, passing the supplied arguments to each. Returns true if the event had listeners, false otherwise.
 - `emitter.eventNames()`: Returns an array listing the events for which the emitter has registered listeners.
