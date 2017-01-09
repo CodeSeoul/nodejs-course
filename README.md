@@ -12,8 +12,8 @@
 ## Syllabus
 - [Lesson 1: Intro](/lesson1/)
 - [Lesson 2: HTTP Basic](/lesson2/)
-- [Lesson 3: Events](/lesson3/)
-- [Lesson 4: File I/O](/lesson4/)
+- [Lesson 3: File I/O](/lesson3/)
+- [Lesson 4: Events](/lesson4/)
 - [Lesson 5: Streams](/lesson5/)
 - [Lesson 6: HTTP](/lesson6/)
 - [Lesson 7: Modules](/lesson7/)
