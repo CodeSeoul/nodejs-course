@@ -40,6 +40,7 @@ MIME types are dicussed in detail in the [Wikipedica article](https://en.wikiped
 ### Serving Static Files
 
 Let's build an application which serves static files such as HTML, CSS and JavaScript(Client-side) files.
+The `fs` (filesystem) module we've convered in Lesson 3 is necessary for serving static files.
 
 // TODO
 
