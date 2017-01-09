@@ -21,11 +21,15 @@ var http = require('http');
 Use the created http instance and call `http.createServer()` method to create a server instance.
 It accepts a single argument, a callback function, that will be called on each HTTP request received by the server.
 This callback function recevies, as arguments, the request and response objects, which are commonly shortened to `req` and `res`.
+
 ```js
 var server = http.createServer(function(req, res) {
    res.end('Hello, World!'); // Send the response body as "Hello, World!"
 });
 ```
+
+For every HTTP request received by the server, the callback funtion will be invoked with new `req` and `res` objects.
+
 
 ### 3. Listen to client's requests
 
