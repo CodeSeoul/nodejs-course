@@ -87,6 +87,36 @@ Read file from Filesystem
 Do Something else
 ```
 
+## Challenges with asynchronous development
+
+How using global variables can lead to bugs
+
+```js
+color = 'blue';
+setTimeout(() => {
+	console.log('The color is ' + color)
+}, 1000)
+color = 'red';
+```
+
+```bash
+The color is red
+```
+
+Instead, pass the variable as a parameter for the function to handle it as a a local variable
+
+```js
+color = 'blue';
+setTimeout((color) => {
+	console.log('The color is ' + color)
+}, 1000, color)
+color = 'red';
+```
+
+```bash
+The color is blue
+```
+
 ## Tip: The Node.js convention for asynchronous callbacks
 
 Most Node.js built-in modules use callbacks with two arguments.
