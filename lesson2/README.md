@@ -50,6 +50,7 @@ Server running at http://localhost:3000
 ```
 
 Open `http://localhost:3000` in any browser and observe the result.
+You should receive a plain-text page consisting of the words "Hellow, World!".
 
 Or use the `curl` command on the terminal
 ```bash
