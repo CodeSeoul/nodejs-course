@@ -17,10 +17,12 @@
 - [Lesson 5: Streams](/lesson5/)
 - [Lesson 6: HTTP](/lesson6/)
 - [Lesson 7: Modules](/lesson7/)
-- Lesson 8: Express
+- [Lesson 8: Express.js](/lesson8/)
+- [Lesson 9: Socket.io](/lesson9/)
 
 ## Schedule
 - [1st Meetup on Jan 14](https://www.meetup.com/Learn-To-Code-Seoul/events/236563042/)
 
-> To be updated as I work on lesson details
+> To be updated as I work on the lesson details
+
 

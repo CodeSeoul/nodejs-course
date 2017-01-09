@@ -1,5 +1,7 @@
 # Lesson 4: File I/O
 
+> Built-in fs module which provides filesystem-related functionality
+
 ## How to import the required module
 The Node.js File System (fs) module can be imported using the following syntax.
 ```js
@@ -42,6 +44,8 @@ fs.readFile('ltcs.txt', function(err, data) {
 - Every method in the fs module has synchronous as well as asynchronous forms. 
 - Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error. 
 - It is better to use an asynchronous method instead of a synchronous method, as the former never blocks a program during its execution, whereas the second one does.
+- Asynchronous programming will likely take some time to grasp and master.
+- It requires a paradigm shift in terms of thinking about how application logic should execute.
 
 [syncVsAsync.js.js](syncVsAsync.js.js)
 ```js
@@ -82,6 +86,12 @@ Read file from Filesystem
   whenever you’re complete, print the contents
 Do Something else
 ```
+
+## Tip: The Node.js convention for asynchronous callbacks
+
+Most Node.js built-in modules use callbacks with two arguments.
+
+The first argument is for an error, should one occur, and the second argument is for the results.
 
 ## Challenges
 [Convert Blocking](challeges/convertBlocking.js)
