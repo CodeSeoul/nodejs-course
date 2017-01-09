@@ -32,7 +32,7 @@ var server = http.createServer(function(req, res) {
 For every HTTP request received by the server, the callback funtion will be invoked with new `req` and `res` objects.
 
 
-### 3. Listen to client's requests
+### 3. Listen to client for incoming requests
 
 Bind the server instance at port 8080 using the `listen` method associated with the server instance. 
 
