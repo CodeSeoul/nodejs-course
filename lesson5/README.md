@@ -150,6 +150,8 @@ $ curl -d 'hello' http://localhost:8080
 hello
 ```
 
+When you send data to it, will echo the data back. :smile:
+
 ## Challenges
 - [Pipe Files](challenges/pipeFiles.js)
 - [Download Server](challenges/downloadServer.js)
