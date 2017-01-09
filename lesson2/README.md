@@ -34,10 +34,10 @@ For every HTTP request received by the server, the callback funtion will be invo
 
 ### 3. Listen to client for incoming requests
 
-Bind the server instance at port 8080 using the `listen` method associated with the server instance. 
+Bind the server instance at port 3000 using the `listen` method associated with the server instance. 
 
 ```js
-server.listen(8080);
+server.listen(3000);
 ```
 
 ## 4. Test Our First HTTP Server
@@ -46,18 +46,18 @@ Execute the [helloServer.js](helloServer.js) to start our first HTTP server.
 
 ```bash
 $ node helloServer.js
-Server running at http://localhost:8080
+Server running at http://localhost:3000
 ```
 
-Open `http://localhost:8080` in any browser and observe the result.
+Open `http://localhost:3000` in any browser and observe the result.
 
 Or use the `curl` command on the terminal
 ```bash
-$ curl http://localhost:8080
+$ curl http://localhost:3000
 Hello, World!
 ```
 
-Now, we have our first HTTP server up and running which is responding to all the HTTP requests at port 8080.
+Now, we have our first HTTP server up and running which is responding to all the HTTP requests at port 3000.
 
 ## Challenges
 - Create a HTTP server which always returns 0 to 9.
