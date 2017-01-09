@@ -64,7 +64,7 @@ var hello = (name) => {
 ### How to use
 - All objects that emit events are instances of the `EventEmitter` class.
 - These objects expose an `eventEmitter.on()` function that allows one or more functions to be attached to named events emitted by the object. 
-- Typically, event names are camel-cased strings but any valid JavaScript property key can be used.
+- Typically, event names are camel-cased strings but any valid JavaScript property key can be used. (except for "error")
 - When the `EventEmitter` object emits an event, all of the functions attached to that specific event are called *synchronously*. 
 - Any values returned by the called listeners are ignored and will be discarded.
 
