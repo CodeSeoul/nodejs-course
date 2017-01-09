@@ -6,4 +6,4 @@ server.on('request', function(req, res) {
   console.log('url:', req.url);
   res.end();
 });
-server.listen(8080);
+server.listen(3000);
