@@ -2,6 +2,70 @@
 
 > Built-in fs module which provides filesystem-related functionality
 
+## What is a Callback?
+
+Callback is an asynchronous equivalent for a function. 
+- A callback function is called at the completion of a given task.
+- Can be passed to another function as a parameter to be called later.
+- Node.js makes heavy use of callbacks.
+
+### JavaScript Recall: setTimeout(function, milliseconds, param1, param2, ...)
+
+```js
+setTimeout(function() {
+	console.log('I execute first.');
+	setTimeout(function() {
+		console.log('I execute next.');
+		setTimeout(function() {
+			console.log('I execute last.');
+		}, 100);
+	}, 500);
+}, 1000);
+```
+
+```bash
+I execute first.
+I execute next.
+I execute last.
+```
+
+### What about N
+
+```js
+function hello(name) {
+	console.log('Hello,', name, '!');
+};
+
+function helloAfterHey(name, callback) {
+	console.log('Hey~');
+	callback(name);
+};
+
+helloAfterHey('Dale', hello);
+```
+
+```bash
+$ node callbacks.js
+Hey~
+Hello, Dale !
+```
+
+### 3 Ways to define a callback function
+```js
+function hello(name) {
+	console.log('Hello,', name, '!');
+};
+
+var hello = function(name) {
+	console.log('Hello,', name, '!');
+};
+
+// ES6 Arrow Function (lambda)
+var hello = (name) => {
+	console.log('Hello,', name, '!');
+};
+```
+
 ## How to import the required module
 The Node.js File System (fs) module can be imported using the following syntax.
 ```js

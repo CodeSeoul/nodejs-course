@@ -12,48 +12,6 @@ The browser triggers events and we can listen for them.
 </script>
 ```
 
-## Callbacks
-
-### What is Callback?
-Callback is an asynchronous equivalent for a function. 
-- A callback function is called at the completion of a given task.
-- Can be passed to another function as a parameter to be called later.
-- Node.js makes heavy use of callbacks.
-
-```js
-function hello(name) {
-	console.log('Hello,', name, '!');
-};
-
-function helloAfterHey(name, callback) {
-	console.log('Hey~');
-	callback(name);
-};
-
-helloAfterHey('Dale', hello);
-```
-```bash
-$ node callbacks.js
-Hey~
-Hello, Dale !
-```
-
-### 3 Ways to define a callback function
-```js
-function hello(name) {
-	console.log('Hello,', name, '!');
-};
-
-var hello = function(name) {
-	console.log('Hello,', name, '!');
-};
-
-// ES6 Arrow Function (lambda)
-var hello = (name) => {
-	console.log('Hello,', name, '!');
-};
-```
-
 ## Events in Node.js
 
 ### Built-in modules
