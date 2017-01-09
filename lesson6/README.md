@@ -29,6 +29,27 @@ server.on('request', (req, res) => {
 server.listen(3000);
 ```
 
+## What's going on behind the secnes?
+
+```bash
+$ curl http://localhost:3000 -v
+* Rebuilt URL to: http://localhost:3000/
+*   Trying ::1...
+* Connected to localhost (::1) port 3000 (#0)
+> GET / HTTP/1.1
+> Host: localhost:3000
+> User-Agent: curl/7.43.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Date: Mon, 09 Jan 2017 13:00:45 GMT
+< Connection: keep-alive
+< Content-Length: 13
+<
+* Connection #0 to host localhost left intact
+Hellow, LTCS!
+```
+
 ## MIME TYPES
 
 When serving files via HTTP, it's usually not enough to just send the contents of a file;
