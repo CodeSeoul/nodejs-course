@@ -8,7 +8,8 @@
 HTTP server listens or waits for requests from clients and return responses.
 
 ## Develop Our First HTTP Server
-Our first server always returns "Hello World".
+
+Our first server always respons with "Hello World".
 
 ### 1. Import Required Module
 Use the `require` directive to load the `http` module and store the returned HTTP instance into an http variable.
