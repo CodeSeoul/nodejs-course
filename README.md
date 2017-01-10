@@ -20,6 +20,12 @@
 - [Lesson 8: Express.js](/lesson8/)
 - [Lesson 9: Socket.io](/lesson9/)
 
+## Slack
+
+You can ask any questions about this course on Slack.
+
+http://learnteachcode.slack.com (channel: javascript-kr)
+
 ## Schedule
 - [1st Meetup on Jan 14](https://www.meetup.com/Learn-To-Code-Seoul/events/236563042/)
 
