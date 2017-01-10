@@ -52,6 +52,14 @@ Hello, LTCS!
 * Connection #0 to host localhost left intact
 ```
 
+## Checking HTTP method
+
+You can check which HTTP method is being used by reading the `req.method` proeprty.
+
+```js
+console.log(req.method)
+```
+
 ## Writing Response Body
 
 First, call the `res.write()` method, which writes response data, and then use the `res.end()` method to end the response.
