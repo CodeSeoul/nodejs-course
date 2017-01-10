@@ -96,6 +96,29 @@ Hello, World!
 - [Atom](https://atom.io)
 - [Bracket](http://brackets.io)
 
+## JavaScript Recap
+
+- variables, functions
+- if, for, while, switch
+- arrays, objects
+
+### 3 Ways to write a function
+
+```js
+function hello(name) {
+	console.log('Hello,', name, '!');
+};
+
+var hello = function(name) {
+	console.log('Hello,', name, '!');
+};
+
+// ES6 Arrow Function (lambda)
+var hello = (name) => {
+	console.log('Hello,', name, '!');
+};
+```
+
 ## Summary
 Node.js is
 - Built on JavaScript
