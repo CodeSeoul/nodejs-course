@@ -4,7 +4,7 @@
 
 ## What are Streams?
 
-Streams can be readable, writable, or *both* using buffers (a sort of queue) in memory.
+Streams can be readable, writable, or *both* using buffers (a sort of queue or a byte array) in memory.
 
 ### Anology
 
