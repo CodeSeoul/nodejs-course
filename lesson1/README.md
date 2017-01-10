@@ -54,6 +54,7 @@ I/O intensive web applications
 - Data Intensive Real-time Applications (DIRT)
 - Data Streaming Applications (Music, Video)
 - JSON APIs based Applications
+- RESTfull web services
 - Websocket Server (like a chat server)
 - Single Page Applications
 
