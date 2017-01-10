@@ -105,8 +105,8 @@ Node.js is
 ## Challeges
 - print 0 to 9 using the `for` loop
 - write a function named "getFullName" which takes the first name, the last name and the country name as arguments and returns the full name according to the country name.
-	- ex1: `getFullName("Dale", "Seo", "KR")` should return "Seo Dale".
-	- ex2: `getFullName("Dale", "Seo", "US")` should return "Dale Seo".
+	- ex1: `getFullName("Dale", "Seo", "KR")` should return `Seo Dale`.
+	- ex2: `getFullName("Dale", "Seo", "US")` should return `Dale Seo`.
 - write a command line program in a file named "greeting.js" which prints a greeting message on the console using the function above.
-	- ex1. `node greeting.js Dale Seo KR` should print "Hello, Seo Dale."
-	- ex2. `node greeting.js Dale Seo KR` should print "Hello, Dale Seo."
+	- ex1. `$ node greeting.js Dale Seo KR` should print `Hello, Seo Dale!`
+	- ex2. `$ node greeting.js Dale Seo KR` should print `Hello, Dale Seo!`
