@@ -52,6 +52,8 @@ Hello, LTCS!
 * Connection #0 to host localhost left intact
 ```
 
+## How to handle Request
+
 ## Checking HTTP method
 
 You can check which HTTP method is being used by reading the `req.method` proeprty.
@@ -60,7 +62,54 @@ You can check which HTTP method is being used by reading the `req.method` proepr
 console.log(req.method)
 ```
 
-## Writing Response Body
+## Reading Request Body Data
+
+When Node.js HTTP parser reads in and parses request data, it makes that data available in the form of `data` events that contains chunks of parsed data ready to be handled by the callback funtion.
+
+```js
+req.on('data', (data) => {
+  console.log(data);
+});
+```
+
+Test
+
+```bash
+curl -d 'abc' http://localhost:3000
+```
+
+Console
+
+```bash
+<Buffer 61 62 63>
+```
+
+## Setting Stream Encoding
+
+By default, the `data` events provide `Buffer` objects, which are a sort of byte arrays. In case that you need to handle textual data not binary data, set the stream encoding to `utf8` then the `data` events will instead emit strings.
+
+```js
+req.setEncoding('utf8'); // Data is now a utf8 string instead of a Buffer
+req.on('data', (data) => {
+  console.log(data);
+});
+```
+
+Test
+
+```bash
+curl -d 'abc' http://localhost:3000
+```
+
+Console
+
+```bash
+abc
+```
+
+## How to handle Response
+
+### Writing Response Body Data
 
 First, call the `res.write()` method, which writes response data, and then use the `res.end()` method to end the response.
 
@@ -76,7 +125,7 @@ As shorthand, `res.write()` and `res.end()` can be conbined into one statement, 
 res.end('Hello, LTCS!\nBye, LTCS!');
 ```
 
-## Setting Response Headers
+### Setting Response Headers
 
 You should add headers in any order, but only up to the first `res.write()` or `res.end()`. After the first part of the response body is written, HTTP headers that thave been set will be flushed.
 
@@ -94,7 +143,7 @@ res.setHeader('Content-Type', 'text/html');
 res.end('<html><body><h1>Hello, LTCS!</h1></body></html>');
 ```
 
-### MIME TYPES
+#### MIME TYPES
 
 When serving files via HTTP, it's usually not enough to just send the contents of a file;
 You also should include the type of file being sent.
@@ -103,7 +152,7 @@ This is done by setting the `Content-Type` HTTP header with the proper MIME type
 MIME types are dicussed in detail in the [Wikipedica article](https://en.wikipedia.org/wiki/MIME).
 
 
-## Setting the Status Code of an HTTP Response
+### Setting the Status Code of an HTTP Response
 
 Set `res.statusCode` property. This property also should be assigned before the first call to `res.write()` or `res.end()`.
 The default HTTP status code is 200.
@@ -112,7 +161,7 @@ The default HTTP status code is 200.
 res.statusCode = 404; // Not Found
 ```
 
-### HTTP status codes
+#### HTTP status codes
 
 - 2xx Success
 - 3xx Redirection
