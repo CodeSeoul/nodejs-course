@@ -127,9 +127,9 @@ res.end('Hello, LTCS!\nBye, LTCS!');
 
 ### Setting Response Headers
 
-#### Content-Type
-
 You should add headers in any order, but only up to the first `res.write()` or `res.end()`. After the first part of the response body is written, HTTP headers that thave been set will be flushed.
+
+#### Content-Type
 
 - text/plain
 
