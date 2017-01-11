@@ -200,10 +200,10 @@ res.statusCode = 404; // Not Found
 
 #### HTTP status codes
 
-- 2xx Success
-- 3xx Redirection
-- 4xx Client Error
-- 5xx Server Error
+- 2xx Success : 200 OK, 201 Created
+- 3xx Redirection : 301 Moved Permanently, 303 See Other
+- 4xx Client Error : 400 Bad Request, 401 Unauthorized, 404 Not Found
+- 5xx Server Error : 500 Internal Server Error, 503 Service Unavailable
 
 HTTP status codes are listed in the [Wikipedia article](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes).
 
