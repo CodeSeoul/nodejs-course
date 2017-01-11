@@ -119,6 +119,12 @@ var hello = (name) => {
 };
 ```
 
+## Mini program: Calculator
+
+```
+TODO: implement it to show how to use parseInt()
+```
+
 ## Summary
 Node.js is
 - Built on JavaScript
