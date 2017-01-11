@@ -227,7 +227,9 @@ http.createServer((req, res) => {
 
 In this one-liner, the data is read in from the file and it sent out to the client as it comes in.
 
-### Serving all files from a directory
+### Serving all files from the base directory
+
+We can simply join the base directory path(`root`) and the URL's `pathname` using the `paht` module's `join()` method to form the absolute path.
 
 ```js
 var http = require('http');
@@ -241,15 +243,17 @@ http.createServer((req, res) => {
 	var url = parse(req.url);
 	var path = join(root, url.pathname);
 	var stream = fs.createReadStream(path);
-  stream.on('data', (data) => {
-    res.setHeader('Content-Length', stat.size);
-    res.write(data);
-  });
-  stream.on('end', () => {
-    res.end();
-  });
+	stream.on('data', (data) => {
+	res.write(data); // write file data to response
+	});
+	stream.on('end', () => {
+	res.end(); // end response when file is complete
+	});
 }).listen(3000);
 ```
+
+`__dirname` is a magic variable provided by Node.js that's assinged the directory apth to the file.
+The server will be serving static files relative to the same directory as this script, but you could configure `root` to specify any directory path.
 
 Test
 
@@ -258,6 +262,8 @@ $ curl http://localhost:3000/test.js
 var http = require('http');
 ...
 ```
+
+The preceding `curl` command reqeusts the server's script itself, which is sent back as the response body.
 
 #### What if you request a file that desn't exist?
 
@@ -272,7 +278,7 @@ curl: (52) Empty reply from server
 
 - On the server side
 
-Our server just stopped!!! :scream:
+Our server's just stopped with a stack trace printed!!! :scream:
 
 ```
 events.js:160
