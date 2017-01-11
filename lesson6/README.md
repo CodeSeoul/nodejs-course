@@ -52,9 +52,12 @@ Hello, LTCS!
 * Connection #0 to host localhost left intact
 ```
 
-## How to handle Request
+Don't worry. You don't have to parse these messages manually.
+Node.js provides an abtraction to represent requests and responses.
 
-## Checking HTTP method
+## Request
+
+### Checking HTTP method
 
 You can check which HTTP method is being used by reading the `req.method` proeprty.
 
@@ -62,7 +65,17 @@ You can check which HTTP method is being used by reading the `req.method` proepr
 console.log(req.method)
 ```
 
-## Reading Request Body Data
+### Checking URL
+
+The requested URL can be accessed with `req.url` property, which may contain several components depending on the request.
+To parse these sections, Node.js provides the `url` module, and specifically the `.parse()` function.
+```
+var url = require('url');
+var parsedUrl = url.parse(req.url);
+console.log(parsedUrl);
+```
+
+### Reading Request Body Data
 
 When Node.js HTTP parser reads in and parses request data, it makes that data available in the form of `data` events that contains chunks of parsed data ready to be handled by the callback funtion.
 
@@ -84,7 +97,7 @@ Console
 <Buffer 61 62 63>
 ```
 
-## Setting Stream Encoding
+### Setting Stream Encoding
 
 By default, the `data` events provide `Buffer` objects, which are a sort of byte arrays. In case that you need to handle textual data not binary data, set the stream encoding to `utf8` then the `data` events will instead emit strings.
 
@@ -107,7 +120,7 @@ Console
 abc
 ```
 
-## How to handle Response
+## Response
 
 ### Writing Response Body Data
 
