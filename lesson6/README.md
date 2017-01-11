@@ -127,6 +127,8 @@ res.end('Hello, LTCS!\nBye, LTCS!');
 
 ### Setting Response Headers
 
+#### Content-Type
+
 You should add headers in any order, but only up to the first `res.write()` or `res.end()`. After the first part of the response body is written, HTTP headers that thave been set will be flushed.
 
 - text/plain
@@ -143,7 +145,7 @@ res.setHeader('Content-Type', 'text/html');
 res.end('<html><body><h1>Hello, LTCS!</h1></body></html>');
 ```
 
-#### MIME TYPES
+##### MIME TYPES
 
 When serving files via HTTP, it's usually not enough to just send the contents of a file;
 You also should include the type of file being sent.
@@ -151,6 +153,28 @@ This is done by setting the `Content-Type` HTTP header with the proper MIME type
 
 MIME types are dicussed in detail in the [Wikipedica article](https://en.wikipedia.org/wiki/MIME).
 
+
+#### Content-Length
+
+To provide a performance boost, the `Content-Length` header should be sent with your response when possible.
+
+```js
+var body = 'I love Learn Teach Code Seoul';
+res.setHeader('Content-Length', Buffer.byteLength(body));
+res.end(body);
+```
+
+You may be tempted to use the `body.length` value for the `Content-Length`, but the `Content-Length` value should represent the byte length, not character length, and the two will be different if the string contains multibyte characters. To avoid this problem, Node.js provides the `Buffer.byteLength()` method.
+
+```bash
+$ node
+> 'abc'.length
+3
+> '가나다'.length
+3
+> Buffer.byteLength('가나다')
+9
+```
 
 ### Setting the Status Code of an HTTP Response
 
