@@ -228,3 +228,22 @@ http.createServer((req, res) => {
 ```
 
 In this one-liner, the data is read in from the file and it sent out to the client as it comes in.
+
+
+## Challenges
+
+- Build a RESTful web service for a to-do app
+
+```bash
+$ curl -d 'buy groceries' http://localhost:3000
+Created
+$ curl -d 'buy node in action' http://localhost:3000
+Created
+$ curl http://localhost:3000
+0) buy groceries
+1) buy node in action
+$ curl -X DELETE http://localhost:3000/0
+Deleted
+curl http://localhost:3000
+0) buy node in action
+```
