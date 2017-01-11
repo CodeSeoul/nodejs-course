@@ -212,9 +212,7 @@ HTTP status codes are listed in the [Wikipedia article](https://en.wikipedia.org
 Let's build an application which serves static files such as HTML, CSS and JavaScript(Client-side) files.
 The `fs` (filesystem) module we've convered in Lesson 3 is necessary for serving static files.
 
-// TODO
-
-### Serving Images
+### Serving a specific Image
 
 Streams an image to a client.
 
@@ -229,6 +227,122 @@ http.createServer((req, res) => {
 
 In this one-liner, the data is read in from the file and it sent out to the client as it comes in.
 
+### Serving all files from a directory
+
+```js
+var http = require('http');
+var fs = require('fs');
+var parse = require('url').parse;
+var join = require('path').join;
+
+var root = __dirname;
+
+http.createServer((req, res) => {
+	var url = parse(req.url);
+	var path = join(root, url.pathname);
+	var stream = fs.createReadStream(path);
+  stream.on('data', (data) => {
+    res.setHeader('Content-Length', stat.size);
+    res.write(data);
+  });
+  stream.on('end', () => {
+    res.end();
+  });
+}).listen(3000);
+```
+
+Test
+
+```bash
+$ curl http://localhost:3000/test.js
+var http = require('http');
+...
+```
+
+#### What if you request a file that desn't exist?
+
+- On the client side
+
+No reply from the server
+
+```bash
+$ curl http://localhost:3000/test1.js
+curl: (52) Empty reply from server
+```
+
+- On the server side
+
+Our server just stopped!!! :scream:
+
+```
+events.js:160
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: ENOENT: no such file or directory, open '/Users/1002139/test/test1.js'
+```
+
+We should make our file server more robust!
+
+### Handling server errors
+
+Errors will be thrown in the current server if you access a file that doen't exist, access a forbidden file, or run into any file I/O-related problem.
+
+A stream, like `fs.ReadStream`, is simply a specialized `EventEmitter` that contains predefined events such as `data` and `end`, which we've already looked at. In addition, `error` events will be thrown when something gets wrong. This means that if you don't listen for these errors, they'll crash your server.
+
+To prevent errors from killing our server, we need to listen for errors by registering an `error` event handler on the `fs.ReadSteram`, which responds with the 500 response status indication an internal server error.
+
+```js
+stream.on('error', (err) => {
+  res.statusCode = 500;
+  res.end('Sorry, Something went wrong!');
+});
+```
+
+Registering an `errer` event helps us catch any forseen or unforseen errors and enables us to respond more gracefully to the client.
+
+Test
+
+```bash
+$ curl -i http://localhost:3000/test1.js
+HTTP/1.1 500 Internal Server Error
+Date: Wed, 11 Jan 2017 13:00:24 GMT
+Connection: keep-alive
+Content-Length: 28
+
+Sorry, Something went wrong!
+```
+
+### Preemptive error handling
+
+`fs.stat()` retrives information about a file. If the named file doesn't exist, `fs.stat()` will respond with a value of `ENOENT` in the `error.code` field, and you can return the error code 404, indicating that the file is not found. If you receive other errors from `fs.stat()`, you can return a generic 500 error code.
+
+```js
+fs.stat(path, (err, stat) => {
+  if (err) {
+    if (err.code == 'ENOENT') {
+      res.statusCode = 404;
+      res.end('Not Found');
+    } else {
+      res.statusCode = 500;
+      res.end('Internal Server Error');
+    }
+  } else {
+    var stream = fs.createReadStream(path);
+    stream.on('data', (data) => {
+      res.setHeader('Content-Length', stat.size);
+      res.write(data);
+    });
+    stream.on('end', () => {
+      res.end();
+    });
+    stream.on('error', (err) => {
+      res.statusCode = 500;
+      res.end('Sorry, Something went wrong!');
+    });		
+  }
+});
+```
 
 ## Challenges
 
