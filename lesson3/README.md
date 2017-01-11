@@ -29,7 +29,7 @@ I execute next.
 I execute last.
 ```
 
-### What about N
+### What about Node.js
 
 ```js
 function hello(name) {
@@ -48,22 +48,6 @@ helloAfterHey('Dale', hello);
 $ node callbacks.js
 Hey~
 Hello, Dale !
-```
-
-### 3 Ways to define a callback function
-```js
-function hello(name) {
-	console.log('Hello,', name, '!');
-};
-
-var hello = function(name) {
-	console.log('Hello,', name, '!');
-};
-
-// ES6 Arrow Function (lambda)
-var hello = (name) => {
-	console.log('Hello,', name, '!');
-};
 ```
 
 ## How to import the required module
@@ -102,6 +86,12 @@ fs.readFile('ltcs.txt', function(err, data) {
 	}
   console.log(data.toString());
 });
+```
+
+## Getting information of a file
+
+```
+// TODO using fs.stat()
 ```
 
 ## Synchronous vs Asynchronous
