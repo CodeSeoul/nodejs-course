@@ -2,7 +2,9 @@
 
 > Who knew JavaScript would end up being a compelling language for wrting serer-side applications?
 
+
 ## JavaScript History
+
 - "Toy" language in 90's
 - Ajax revolution in 2005
 	- GMail
@@ -13,7 +15,9 @@
 - Node.js debuted in 2009
 	- Changed the types of applications you can build on the web
 
+
 ## What is Node.js?
+
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. 
 Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. 
 Node.js' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.
@@ -28,22 +32,34 @@ Node.js' package ecosystem, npm, is the largest ecosystem of open source librari
 	- English : https://nodejs.org/en/
 	- Korean : https://nodejs.org/ko/
 
+
 ## What is Node.js NOT?
+
 - A Web Framework
 	- Node.js is a platform for JavaScript applications, and it's not to be confused with a framework.
 	- It's a common misconception to think of Node.js as Rails or Django for JavaScript, whereas it's much lower level.
 	- We'll talk about a popular frameowork for Node.js called Express.js later.
+
 - Multi-threaded
 	- You can think of it as a single threaded server.
+	- But it can handle concurrent operations without multiple threads of execution, so it can scale pretty well.
+
 
 ## Built on JavaScript
+
 - Used to run only on browsers
 - Cross Platform(O/S)
 - Limitation
 
-## Why is Node.js so popular today?
+
+## How fast Node.js growing?
+
+Node.js packages are growing faster than Ruby, Pathon and even Java! ([http://www.modulecounts.com](http://www.modulecounts.com)
 
 ![module-counts](module-counts.png)
+
+
+## What's making Node.js so attractive?
 
 - Develepers can write web applications in one language
 - Reduce the context switch between client and server development
@@ -52,16 +68,20 @@ Node.js' package ecosystem, npm, is the largest ecosystem of open source librari
 - JSON is a very popular data interchange format today and is native to JavaScript
 - JavaScript is the language used in various No SQL (MongoDB, CouchDB)
 
+
 ## What could you build?
-I/O intensive web applications
+
+Node.js is ideal for I/O bound applications, but not so great for CPU-heavy applications.
+
 - Data Intensive Real-time Applications (DIRT)
-- Data Streaming Applications (Music, Video)
-- JSON APIs based Applications
-- RESTfull web services
-- Websocket Server (like a chat server)
 - Single Page Applications
+- JSON APIs (RESTful Web Services)
+- Data Streaming Applications (Music, Video)
+- Websocket Server (like a chat server)
+
 
 ## How to install Node.js
+
 - Download [here](https://nodejs.org/en/download)
 - Make sure it's installed
 ```
@@ -69,7 +89,9 @@ $ node -v
 v7.0.0
 ```
 
+
 ## Command Line Interface (a.k.a. CLI)
+
 - Run code on a terminal
 ```js
 $ node
@@ -83,6 +105,8 @@ $ node
 ReferenceError: window is not defined
 ```
 
+Unlike the browser, Node does not have a window `global` object, but instead has two others: `globals` and `process`.
+
 - Run code in a file
 Write [hello.js](hello.js).
 ```js
@@ -94,16 +118,20 @@ $ node hello.js
 Hello, World!
 ```
 
+
 ## What's your IDE of choice?
+
 - [Sublime Text](https://www.sublimetext.com/3)
 - [Atom](https://atom.io)
 - [Bracket](http://brackets.io)
+
 
 ## JavaScript Recap
 
 - variables, functions
 - if, for, while, switch
 - arrays, objects
+
 
 ### 3 Ways to write a function
 
@@ -122,17 +150,20 @@ var hello = (name) => {
 };
 ```
 
+
 ## Mini program: Calculator
 
 ```
 TODO: implement it to show how to use parseInt()
 ```
 
+
 ## Summary
 Node.js is
 - Built on JavaScript
 - Evented and asynchronous
 - Desigend for data-intensive real-time applications
+
 
 ## Challeges
 - print 0 to 9 using the `for` loop
