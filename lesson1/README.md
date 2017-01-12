@@ -42,6 +42,9 @@ Node.js' package ecosystem, npm, is the largest ecosystem of open source librari
 - Limitation
 
 ## Why is Node.js so popular today?
+
+![module-counts](module-counts.png)
+
 - Develepers can write web applications in one language
 - Reduce the context switch between client and server development
 - JavaScript is unavoidable if you've done any programming for the web
