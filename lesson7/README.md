@@ -18,25 +18,29 @@ How does it find these files?
 
 ## Requring Modules
 
-Look in the same directory
+Java or Python use the `import` function to load other libraries, while PHP and Ruby use `require`.
+Node.js implements the CommonJS interface for modules.
+In Node.js you can also load other depencies using the `require` keyword.
+
+- Look in the same directory
 
 ```js
 var some_module = require('./some_module');
 ```
 
-Look in the parent directory
+- Look in the parent directory
 
 ```js
 var some_module = require('../some_module');
 ```
 
-Look in the root directory
+- Look in the root directory
 
 ```js
 var some_module = require('/Users/dale/some_module');
 ```
 
-Look in the **node_modules** directory
+- Look in the **node_modules** directory
 
 ```js
 var some_module = require('some_module');
