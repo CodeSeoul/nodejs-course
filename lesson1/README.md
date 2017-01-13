@@ -386,9 +386,9 @@ Node.js is
 
 
 ## Challenges
-- [Revising Strings][callenges/revising-strings.js]
-- [Rounding Numbers][callenges/rouding-numbers.js]
-- [If Statement][callenges/if-statement.js]
-- [Array Filtering][callenges/array-filtering.js]
-- [Looping Through Arrays][callenges/looping-through-arrays.js]
-- [Function Arguments][callenges/function-arguments.js]
+- [Revising Strings](challenges/revising-strings.js)
+- [Rounding Numbers](challenges/rouding-numbers.js)
+- [If Statement](challenges/if-statement.js)
+- [Array Filtering](challenges/array-filtering.js)
+- [Looping Through Arrays](challenges/looping-through-arrays.js)
+- [Function Arguments](challenges/function-arguments.js)
