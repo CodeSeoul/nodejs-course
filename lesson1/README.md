@@ -11,6 +11,7 @@
 - Ajax revolution in 2005
 	- GMail
 	- Google Map 
+- jQuery released in 2006
 - Google Chrome release in 2008
 	- JavaScript performance has improved at an incredibly fast rate
 	- Heavy competition between browser vendors
@@ -62,6 +63,17 @@ Node.js packages are growing faster than Ruby, Pathon and even Java!
 
 - http://www.modulecounts.com
 - http://langpop.corger.nl
+
+
+## How popular is JavaScript?
+
+![Github](http://i0.wp.com/blog.hackerearth.com/wp-content/uploads/2016/11/Game_deck-25.jpg)
+
+![StackOverflow](http://i0.wp.com/blog.hackerearth.com/wp-content/uploads/2016/11/Game_deck-21.jpg)
+
+![Indeed](http://i1.wp.com/blog.hackerearth.com/wp-content/uploads/2016/11/Game_deck-22-1.jpg)
+
+Ahead of its annual conference in September 2016, Github shared its report [here](https://octoverse.github.com).
 
 
 ## What's making Node.js so attractive?
