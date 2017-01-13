@@ -1,4 +1,4 @@
-# Lesson 2: HTTP
+# Lesson 2: Basics
 
 > Don't worry if the details in this lesson seem over your head.
 
