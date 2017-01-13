@@ -82,6 +82,7 @@ Ahead of its annual conference in September 2016, Github shared its report [here
 - Reduce the context switch between client and server development
 - JavaScript is unavoidable if you've done any programming for the web
 - Full-stack development trend and Start-up booms
+- Most coding schools/bootcamps teach JavaScript as the first language
 - JSON is a very popular data interchange format today and is native to JavaScript
 - JavaScript is the language used in various No SQL (MongoDB, CouchDB)
 
@@ -346,6 +347,20 @@ Let's tak a look at the main difference between Node.js and JavaScript.
 
 Node'js and browser JavaScript differ when it comes to globals.
 
+## Node.js Global Objects
+
+These objects are available in all modules.
+As a global, they are always available to Node.js applications without using `require()`.
+
+- console
+- __filename
+- __dirname
+
+```js
+console.log(__filename);
+console.log(__dirname);
+```
+
 ## Node.js Process Information
 
 Each Node.js script that runs is, in essence, a process. Conveniently, developers can access useful information in code with the `process` object.
@@ -363,6 +378,34 @@ Each Node.js script that runs is, in essence, a process. Conveniently, developer
 $ ps |grep node
 50169 ttys000    0:00.12 node
 50581 ttys001    0:00.00 grep node
+```
+
+### process.argv
+
+The `process.argv` property returns an array containing the command line arguments passed when the Node.js process was launched.
+
+- The 1st element: the absolute pathname of the executable that started the Node.js process
+- The 2nd element: the path to the JavaScript file being executed
+- The remaining elements: any additional command line arguments
+
+Write process-args.js
+
+```js
+// print process.argv
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
+```
+
+Test
+
+```bash
+$ node process-args.js one two=three four
+0: /usr/local/bin/node
+1: /Users/mjr/work/node/process-2.js
+2: one
+3: two=three
+4: four
 ```
 
 ## Exporting and Importing Modules
