@@ -178,5 +178,6 @@ Most Node.js built-in modules use callbacks with two arguments.
 The first argument is for an error, should one occur, and the second argument is for the results.
 
 ## Challenges
-[Convert Blocking](challeges/convertBlocking.js)
-[Copy File](challeges/copyFile.js)
+
+- [Convert Blocking](challeges/convertBlocking.js)
+- [Copy File](challeges/copyFile.js)

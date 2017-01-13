@@ -1,11 +1,104 @@
 # Lesson 2: Basics
 
+> Let's look at Node.js fundamentals.
+
+
+## How Node.js is Different from JavaScript?
+
+Let's talk a look at the main difference between Node.js and JavaScript.
+
+Node'js and browser JavaScript differ when it comes to globals.
+
+
+## Node.js Global Objects
+
+These objects are available in all modules.
+As a global, they are always available to Node.js applications without using `require()`.
+
+- console
+- __filename
+- __dirname
+
+```js
+console.log(__filename);
+console.log(__dirname);
+```
+
+## Node.js Process Information
+
+Each Node.js script that runs is, in essence, a process. Conveniently, developers can access useful information in code with the `process` object.
+
+```js
+> process.pid
+50169
+> process.cwd()
+'/Users/1002139/ltcs/nodejs-course'
+```
+
+`ps |grep node` outputs all Ndoe.js programs running on your machine.
+
+```bash
+$ ps |grep node
+50169 ttys000    0:00.12 node
+50581 ttys001    0:00.00 grep node
+```
+
+### process.argv
+
+The `process.argv` property returns an array containing the command line arguments passed when the Node.js process was launched.
+
+- The 1st element: the absolute pathname of the executable that started the Node.js process
+- The 2nd element: the path to the JavaScript file being executed
+- The remaining elements: any additional command line arguments
+
+Write process-args.js
+
+```js
+// print process.argv
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
+```
+
+Test
+
+```bash
+$ node process-args.js one two=three four
+0: /usr/local/bin/node
+1: /Users/mjr/work/node/process-2.js
+2: one
+3: two=three
+4: four
+```
+
+## Exporting and Importing Modules
+
+There is no way to include modules using JavaScript itself in browsers. 
+Scripts are supposed to be linked together using a different language(HTML).
+
+We can export and import modules in Node.js with great dependency management.
+We'll cover this in a different lesson in more detail.
+
+
+## Mini program: Calculator
+
+```
+TODO: implement it to show how to use parseInt()
+```
+
+
+
+
+
+
+## What is HTTP Server?
+
 > Don't worry if the details in this lesson seem over your head.
 
 > I'd like to give you a preview of what you'll be able to do when you've completed the course.
 
-## What is HTTP Server?
 HTTP server listens or waits for requests from clients and return responses.
+
 
 ## Develop Our First HTTP Server
 
@@ -40,6 +133,7 @@ Bind the server instance at port 3000 using the `listen` method associated with 
 server.listen(3000);
 ```
 
+
 ## 4. Test Our First HTTP Server
 
 Execute the [helloServer.js](helloServer.js) to start our first HTTP server.
@@ -60,5 +154,11 @@ Hello, World!
 
 Now, we have our first HTTP server up and running which is responding to all the HTTP requests at port 3000.
 
+
 ## Challenges
+
+- write a command line program in a file named "greeting.js" which prints a greeting message on the console using the function above.
+	- ex1. `$ node greeting.js Dale Seo KR` should print `Hello, Seo Dale!`
+	- ex2. `$ node greeting.js Dale Seo KR` should print `Hello, Dale Seo!`
+
 - Create a HTTP server which always returns 0 to 9.
