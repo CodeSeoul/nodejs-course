@@ -83,6 +83,7 @@ Ahead of its annual conference in September 2016, Github shared its report [here
 - JavaScript is unavoidable if you've done any programming for the web
 - Full-stack development trend and Start-up booms
 - Most coding schools/bootcamps teach JavaScript as the first language
+- Node.js is a part of the MEAN stack.
 - JSON is a very popular data interchange format today and is native to JavaScript
 - JavaScript is the language used in various No SQL (MongoDB, CouchDB)
 
@@ -387,7 +388,7 @@ Node.js is
 
 ## Challenges
 - [Revising Strings](challenges/revising-strings.js)
-- [Rounding Numbers](challenges/rouding-numbers.js)
+- [Rounding Numbers](challenges/rounding-numbers.js)
 - [If Statement](challenges/if-statement.js)
 - [Array Filtering](challenges/array-filtering.js)
 - [Looping Through Arrays](challenges/looping-through-arrays.js)
