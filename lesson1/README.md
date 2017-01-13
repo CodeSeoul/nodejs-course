@@ -5,6 +5,8 @@
 
 ## JavaScript History
 
+![javascript-history](javascript-history.png)
+
 - "Toy" language in 90's
 - Ajax revolution in 2005
 	- GMail
@@ -54,9 +56,12 @@ Node.js' package ecosystem, npm, is the largest ecosystem of open source librari
 
 ## How fast Node.js growing?
 
-Node.js packages are growing faster than Ruby, Pathon and even Java! ([http://www.modulecounts.com](http://www.modulecounts.com)
+Node.js packages are growing faster than Ruby, Pathon and even Java!
 
 ![module-counts](module-counts.png)
+
+- http://www.modulecounts.com
+- http://langpop.corger.nl
 
 
 ## What's making Node.js so attractive?
@@ -224,7 +229,7 @@ undefined
 ```
 
 
-### Object Literal Notation
+### Objects
 
 Object notation is super readable and compact.
 
@@ -365,6 +370,7 @@ TODO: implement it to show how to use parseInt()
 
 
 ## Summary
+
 Node.js is
 - Built on JavaScript
 - Evented and asynchronous
@@ -372,6 +378,7 @@ Node.js is
 
 
 ## Challeges
+
 - print 0 to 9 using the `for` loop
 - write a function named "getFullName" which takes the first name, the last name and the country name as arguments and returns the full name according to the country name.
 	- ex1: `getFullName("Dale", "Seo", "KR")` should return `Seo Dale`.
