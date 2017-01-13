@@ -82,37 +82,67 @@ Node.js is ideal for I/O bound applications, but not so great for CPU-heavy appl
 
 ## How to install Node.js
 
-- Download [here](https://nodejs.org/en/download)
-- Make sure it's installed
+Download one-click installers for Mac or Windows [here](https://nodejs.org/en/download)
+
+If you know how to use HomeBrew...
+
+```
+$ brew install node
+$ brew install npm
+```
+
+Make sure it's installed properly on the terminal
+
 ```
 $ node -v
 v7.0.0
+$ npm -v
+3.10.8
 ```
 
 
-## Command Line Interface (a.k.a. CLI)
+## Node.js Console
 
-- Run code on a terminal
+Node.js provides CLI(Command Line Interface).
+Using this shell program, we can execute pretty much any Node.js/JavaScript code on the terminal.
+
 ```js
 $ node
 > 1 + 2
 3
+> 17 + 31 / 2 * 5
+94.5
 > 'Hello, ' + 'Node.js!'
 'Hello, Node.js!'
 > console.log('Hello, World!')
 'Hello, World!'
+> a = 1; b = 2; a + b
+3
+> function sqrt(n) { return n * n; }
+undefined
+> sqrt(3)
+9
+> new Date();
+2017-01-03T03:43:16.185Z
 > window.alert('abc');
 ReferenceError: window is not defined
 ```
 
 Unlike the browser, Node does not have a window `global` object, but instead has two others: `globals` and `process`.
 
-- Run code in a file
-Write [hello.js](hello.js).
+
+## Launching Node.js Scripts
+
+To start a Node.js script from a file, simply run `node <filename>`.
+
+- Write [hello.js](hello.js).
+
 ```js
 console.log('Hello, World!');
 ```
-Just run it!
+
+- Just run it!
+
 ```js
 $ node hello.js
 Hello, World!
