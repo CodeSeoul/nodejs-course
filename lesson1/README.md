@@ -128,7 +128,7 @@ undefined
 ReferenceError: window is not defined
 ```
 
-Unlike the browser, Node does not have a window `global` object, but instead has two others: `globals` and `process`.
+Be careful! Unlike in a browser, the `window` and `document` global object is absent in Node.js. (Obviously we don't deal with a browser window server-side)
 
 
 ## Launching Node.js Scripts
@@ -156,29 +156,175 @@ Hello, World!
 - [Bracket](http://brackets.io)
 
 
-## JavaScript Recap
+## JavaScript Recaps
 
 - variables, functions
 - if, for, while, switch
 - arrays, objects
 
 
-### 3 Ways to write a function
+## JavaScript Basics and Syntax
+
+Don't worry! Most of the Node.js syntax is similar to front-end JavaScript.
+
+
+### Loose Typing
+
+Automatic typecasting works well most of the time. It's a great feature that saves a lot of time and mental energy!
+There are only a few types of primitives.
+
+- String
+- Number (both integer and real)
+- Boolean
+- RegExp
+- Undefined
+- Null
+
+Everything else is an object.
 
 ```js
+> 'a' === new String('a')
+false
+> 'a' === new String('a').toString()
+true
+> 'a' == new String('a')
+true
+```
+
+By the way, `==` performs automatic typecasting whereas `===` does not.
+
+```js
+> typeof('a')
+'string'
+> typeof(new String('a'))
+'object'
+```
+
+
+### Object Literal Notation
+
+Object notation is super readable and compact.
+
+```js
+var car = {
+	color: 'white',
+	type: 'sedan',
+	owner: {
+		...
+	}
+}
+```
+
+
+### Functions
+
+Functions are objects in Node.js and we treat them as variables.
+
+
+### Define/Create a Function
+
+```js
+// Named Function
 function hello(name) {
 	console.log('Hello,', name, '!');
-};
+	return true;
+}
 
+// Anonymous Function
 var hello = function(name) {
 	console.log('Hello,', name, '!');
+	return true;
 };
 
-// ES6 Arrow Function (lambda)
+// ES6 Arrow Function (a.k.a. lambda)
 var hello = (name) => {
 	console.log('Hello,', name, '!');
+	return true;
 };
 ```
+
+
+### Pass Functions as Parameters
+
+JavaScript treats functions like any other objects, so we can pass them to other functions as parameters. (usually, callbcks in Node.js)
+
+```js
+var convertNum = function(num) {
+	return num + 10;
+};
+
+var processNum = function(num, fn) {
+	return fn(num);
+};
+
+processNum(5, convertNum); // 15
+```
+
+
+### Arrays
+
+Arrays are also objects that have some special methods to manage elements in it.
+
+```js
+var emptyArr = [];
+var numberArr = [1, 2, 3, 4, 5];
+var stringArr = ['A', 'B', 'C'];
+var arr = [1, 'A', {name: 'Dale'}, function() { console.log('boo'); }];
+```
+
+Example
+
+```js
+var fruits = ['Apple', 'Banana', 'Coconut'];
+
+console.log(fruits.length);
+
+var fruit1 = fruits[0];
+var fruit2 = fruits[1];
+var fruit3 = fruits[2];
+var fruit3 = fruits[3]; // undefined
+
+fruits[1] = "Lemon" // ["Apple", "Lemon", "Coconut"]
+
+fruits.push("Orange"); // ["Apple", "Banana", "Coconut", "Orange"]
+fruits.push("Strawberry"); // ["Apple", "Banana", "Coconut", "Orange", "Strawberry"]
+
+delete fruits[3]; // ["Apple", "Lemon", "Coconut", , "Strawberry"]
+```
+
+
+## How Node.js is Different?
+
+Let's tak a look at the main difference between Node.js and JavaScript.
+
+Node'js and browser JavaScript differ when it comes to globals.
+
+## Node.js Process Information
+
+Each Node.js script that runs is, in essence, a process. Conveniently, developers can access useful information in code with the `process` object.
+
+```js
+> process.pid
+50169
+> process.cwd()
+'/Users/1002139/ltcs/nodejs-course'
+```
+
+`ps |grep node` outputs all Ndoe.js programs running on your machine.
+
+```bash
+$ ps |grep node
+50169 ttys000    0:00.12 node
+50581 ttys001    0:00.00 grep node
+```
+
+## Exporting and Importing Modules
+
+There is no way to include modules using JavaScript itself in browsers. 
+Scripts are supposed to be linked together using a different language(HTML).
+
+We can export and import modules in Node.js with great dependency management.
+We'll cover this in a different lesson in more detail.
 
 
 ## Mini program: Calculator
