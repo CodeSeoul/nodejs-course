@@ -178,13 +178,6 @@ However, if you are already familiar and comfortable with the IDE of your choice
 - [WebStorm](https://www.jetbrains.com/webstorm/)
 
 
-## JavaScript Recaps
-
-- variables, functions
-- if, for, while, switch
-- arrays, objects
-
-
 ## JavaScript Basics and Syntax
 
 Don't worry! Most of the Node.js syntax is similar to front-end JavaScript.
@@ -334,94 +327,53 @@ delete fruits[3]; // ["Apple", "Lemon", "Coconut", , "Strawberry"]
 ```
 
 
-### Wanna know more?
+### If Statement
+
+Conditional statements are used to alter the control flow of a program, based on a specified boolean condition.
+A conditional statement looks like this.
+
+```js
+if (n > 1) {
+ console.log('the variable n is greater than 1.');
+} else {
+ console.log('the variable n is less than or equal to 1.');
+}
+```
+
+Inside parentheses you must enter a logic statement, meaning that the result of the statement is either true or false.
+The else block is optional and contains the code that will be executed if the statement is false. 
+
+
+### For Loop
+
+For loops allow you to repeatedly run a block of code a certain number of times. 
+This for loop logs to the console ten times:
+
+```js
+for (var i = 0; i < 10; i++) {
+	console.log(i);
+}
+```
+
+The first part, `var i = 0`, is run once at the beginning of the loop.
+The variable `i` is used to track how many times the loop has run.
+
+The second part, `i < 10`, is checked at the beginning of every loop iteration before running the code inside the loop. If the statement is true, the code inside the loop is executed.
+If it is false, then the loop is complete. 
+
+The statement `i < 10` indicates that the loop will continue as long as i is less than 10.
+
+The final part, `i++`, is executed at the end of every loop.
+This increases the variable `i` by 1 after each loop. 
+Once `i` reaches 10, the loop will exit.
+
+
+
+### Want more?
 
 For the complete list of methods and examples, visit the following sites.
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
-
-
-## How Node.js is Different?
-
-Let's tak a look at the main difference between Node.js and JavaScript.
-
-Node'js and browser JavaScript differ when it comes to globals.
-
-## Node.js Global Objects
-
-These objects are available in all modules.
-As a global, they are always available to Node.js applications without using `require()`.
-
-- console
-- __filename
-- __dirname
-
-```js
-console.log(__filename);
-console.log(__dirname);
-```
-
-## Node.js Process Information
-
-Each Node.js script that runs is, in essence, a process. Conveniently, developers can access useful information in code with the `process` object.
-
-```js
-> process.pid
-50169
-> process.cwd()
-'/Users/1002139/ltcs/nodejs-course'
-```
-
-`ps |grep node` outputs all Ndoe.js programs running on your machine.
-
-```bash
-$ ps |grep node
-50169 ttys000    0:00.12 node
-50581 ttys001    0:00.00 grep node
-```
-
-### process.argv
-
-The `process.argv` property returns an array containing the command line arguments passed when the Node.js process was launched.
-
-- The 1st element: the absolute pathname of the executable that started the Node.js process
-- The 2nd element: the path to the JavaScript file being executed
-- The remaining elements: any additional command line arguments
-
-Write process-args.js
-
-```js
-// print process.argv
-process.argv.forEach((val, index) => {
-  console.log(`${index}: ${val}`);
-});
-```
-
-Test
-
-```bash
-$ node process-args.js one two=three four
-0: /usr/local/bin/node
-1: /Users/mjr/work/node/process-2.js
-2: one
-3: two=three
-4: four
-```
-
-## Exporting and Importing Modules
-
-There is no way to include modules using JavaScript itself in browsers. 
-Scripts are supposed to be linked together using a different language(HTML).
-
-We can export and import modules in Node.js with great dependency management.
-We'll cover this in a different lesson in more detail.
-
-
-## Mini program: Calculator
-
-```
-TODO: implement it to show how to use parseInt()
-```
 
 
 ## Summary
@@ -430,14 +382,13 @@ Node.js is
 - Built on JavaScript
 - Evented and asynchronous
 - Desigend for data-intensive real-time applications
+- JavaScript is growing rapidly and *one of the most popular programming languages* :grin:
 
 
-## Challeges
-
-- print 0 to 9 using the `for` loop
-- write a function named "getFullName" which takes the first name, the last name and the country name as arguments and returns the full name according to the country name.
-	- ex1: `getFullName("Dale", "Seo", "KR")` should return `Seo Dale`.
-	- ex2: `getFullName("Dale", "Seo", "US")` should return `Dale Seo`.
-- write a command line program in a file named "greeting.js" which prints a greeting message on the console using the function above.
-	- ex1. `$ node greeting.js Dale Seo KR` should print `Hello, Seo Dale!`
-	- ex2. `$ node greeting.js Dale Seo KR` should print `Hello, Dale Seo!`
+## Challenges
+- [Revising Strings][callenges/revising-strings.js]
+- [Rounding Numbers][callenges/rouding-numbers.js]
+- [If Statement][callenges/if-statement.js]
+- [Array Filtering][callenges/array-filtering.js]
+- [Looping Through Arrays][callenges/looping-through-arrays.js]
+- [Function Arguments][callenges/function-arguments.js]
