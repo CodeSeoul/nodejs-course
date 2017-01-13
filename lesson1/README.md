@@ -149,11 +149,15 @@ Hello, World!
 ```
 
 
-## What's your IDE of choice?
+## Node.js IDEs and Code Editors
+
+You don't need to compile JavaScript code, because it's loaded into memory and interpreted immediately.
+Therefore, a lightweight text editor is highly recommended.
+However, if you are already familiar and comfortable with the IDE of your choice, feel free to stick with it.
 
 - [Sublime Text](https://www.sublimetext.com/3)
 - [Atom](https://atom.io)
-- [Bracket](http://brackets.io)
+- [WebStorm](https://www.jetbrains.com/webstorm/)
 
 
 ## JavaScript Recaps
@@ -198,6 +202,25 @@ By the way, `==` performs automatic typecasting whereas `===` does not.
 'string'
 > typeof(new String('a'))
 'object'
+```
+
+
+### Strings
+
+String are just objects and nothing special about it.
+
+```js
+> var text = 'Learn Teach Code Seoul'
+undefined
+> text.length
+22
+> text.substr(10)
+'h Code Seoul'
+> text.substr(10, 5)
+'h Cod'
+> text.split(' ')
+[ 'Learn', 'Teach', 'Code', 'Seoul' ]
+
 ```
 
 
@@ -291,6 +314,13 @@ fruits.push("Strawberry"); // ["Apple", "Banana", "Coconut", "Orange", "Strawber
 
 delete fruits[3]; // ["Apple", "Lemon", "Coconut", , "Strawberry"]
 ```
+
+
+### Wanna know more?
+
+For the complete list of methods and examples, visit the following sites.
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 
 
 ## How Node.js is Different?
