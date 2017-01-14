@@ -88,6 +88,7 @@ Ahead of its annual conference in September 2016, Github shared its report [here
 - JavaScript is the language used in various No SQL (MongoDB, CouchDB)
 
 ![Mean Stack](mean-stack.png)
+![Mean Flow](mean-flow.png)
 
 
 ## What could you build?
