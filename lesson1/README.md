@@ -87,9 +87,18 @@ Ahead of its annual conference in September 2016, Github shared its report [here
 - JSON is a very popular data interchange format today and is native to JavaScript
 - JavaScript is the language used in various No SQL (MongoDB, CouchDB)
 
+
 ## MEAN Stack
 
 ![Mean Stack](mean-stack.png)
+
+MEAN is an opinionated fullstack javascript framework which simplifies and accelerates web application development.
+
+- MongoDB is the leading NoSQL database, empowering businesses to be more agile and scalable.
+- Express is a minimal and flexible node.js web application framework, providing a robust set of features for building single and multi-page, and hybrid web applications.
+- AngularJS lets you extend HTML vocabulary for your application. The resulting environment is extraordinarily expressive, readable, and quick to develop.
+- Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications
+
 ![Mean Flow](mean-flow.png)
 
 
