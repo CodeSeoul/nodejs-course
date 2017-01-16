@@ -190,5 +190,5 @@ Now, we have our first HTTP server up and running which is responding to all the
 
 ## Challenges
 
-- [Calculator](calculator.js)
-- [Counter Server](counterServer.js)Create a HTTP server which always returns 0 to 9.
+- [Calculator](challenges/calculator.js)
+- [Counter Server](challenges/counterServer.js)
