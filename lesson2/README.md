@@ -1,6 +1,6 @@
 # Lesson 2: Basics
 
-> Let's look at Node.js fundamentals.
+> Let's look at Node.js fundamentals and develop simple applications.
 
 
 ## How Node.js is Different from JavaScript?
