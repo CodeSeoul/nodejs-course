@@ -85,6 +85,8 @@ We'll cover this in a different lesson in more detail.
 
 ## Command Line Application
 
+![cli](cli.jpg)
+
 Write a command line application which prints a greeting message on the console.
 
 [greeting.js](greeting.js)
