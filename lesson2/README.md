@@ -130,6 +130,9 @@ Hello, Dale Seo!
 
 ### What is HTTP Server?
 
+![http](http.png)
+
+
 HTTP server listens or waits for requests from clients and returns responses.
 
 
