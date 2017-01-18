@@ -181,3 +181,4 @@ The first argument is for an error, should one occur, and the second argument is
 
 - [Convert Blocking](challeges/convertBlocking.js)
 - [Copy File](challeges/copyFile.js)
+- [Rectangle]challeges/rectangle.js)
