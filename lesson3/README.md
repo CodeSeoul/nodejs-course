@@ -179,6 +179,6 @@ The first argument is for an error, should one occur, and the second argument is
 
 ## Challenges
 
-- [Convert Blocking](challeges/convertBlocking.js)
-- [Copy File](challeges/copyFile.js)
-- [Rectangle](challeges/rectangle.js)
+- [Convert Blocking](challenges/convertBlocking.js)
+- [Copy File](challenges/copyFile.js)
+- [Rectangle](challenges/rectangle.js)
