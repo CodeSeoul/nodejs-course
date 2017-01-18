@@ -57,6 +57,8 @@ Node.js provides an abtraction to represent requests and responses.
 
 ## Request
 
+A request message consist of Request Line(Method, Path, Version), Request Headers, Request Body.
+
 ### Checking HTTP method
 
 You can check which HTTP method is being used by reading the `req.method` proeprty.
@@ -121,6 +123,8 @@ abc
 ```
 
 ## Response
+
+A response message consist of Status Line, Response Headers, Response Body.
 
 ### Writing Response Body Data
 
