@@ -177,6 +177,10 @@ Most Node.js built-in modules use callbacks with two arguments.
 
 The first argument is for an error, should one occur, and the second argument is for the results.
 
+## Tip: Taming Callbacks in Node.js
+
+Programmers unfamiliar with JavaScript, who work with Java or PHP, might be surprised when they see Node.js code described on [Callback Hell](http://callbackhell.com).
+
 ## Challenges
 
 - [Convert Blocking](challenges/convertBlocking.js)
