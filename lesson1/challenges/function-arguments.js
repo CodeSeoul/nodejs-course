@@ -10,3 +10,13 @@ Within the 'getFullName' function, return the full name according to the country
 After that, inside the parentheses of console.log(), call the getFullName() function 
 with your first and last name and country name as the arguments.
 */
+function getFullName( fName,  lName,  country){
+	if(country == 'KR'){
+		console.log(lName + " "+ fName);
+	}
+	else{
+		console.log(fName + " "+ lName);
+	}
+}
+getFullName("Dale", "Seo", "KR");
+getFullName("Dale", "Seo", "US")

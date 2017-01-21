@@ -18,3 +18,7 @@ The challenge:
 
   Use console.log() to print the results of the .replace() method to the terminal.
 */
+var pizza = 'pizza';
+pizza =pizza.replace('pizza','burger');
+pizza =pizza.replace('alright','wonderful');
+console.log(pizza);
