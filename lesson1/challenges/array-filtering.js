@@ -25,3 +25,12 @@ The challenge:
 
   Use console.log() to print the filtered array to the terminal.
 */
+
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var filtered = numbers.filter(function(numbers){
+    if(numbers%2===0){
+      return true;
+    }
+});
+
+console.log(filtered);
