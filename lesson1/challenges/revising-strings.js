@@ -9,7 +9,6 @@ Here is an example using the .replace() method:
   example = example.replace('LA', 'Seoul');
   console.log(example);
 
-
 The challenge:
 
   Define a variable named pizza that references this string: 'pizza is alright'
@@ -18,3 +17,9 @@ The challenge:
 
   Use console.log() to print the results of the .replace() method to the terminal.
 */
+
+
+ var pizza = 'pizza is alright';
+ pizza = pizza.replace('pizza', 'buger');
+ pizza = pizza.replace('alright', 'wonderful');
+ console.log(pizza);
