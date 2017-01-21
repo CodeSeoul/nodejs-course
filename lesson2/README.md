@@ -5,10 +5,11 @@
 
 ## How Node.js is Different from JavaScript?
 
-Let's talk a look at the main difference between Node.js and JavaScript.
+Let's take a look at the main difference between Node.js and JavaScript.
 
 Node'js and browser JavaScript differ when it comes to globals.
 
+![global][global.jpg]
 
 ### Node.js Global Objects
 
