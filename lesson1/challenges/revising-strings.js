@@ -14,7 +14,7 @@ The challenge:
 
   Define a variable named pizza that references this string: 'pizza is alright'
 
-  Use the .replace() method to change 'pizza' and 'alright' to 'buger' and 'wonderful' respectively.
+  Use the .replace() method to change 'pizza' and 'alright' to 'burger' and 'wonderful' respectively.
 
   Use console.log() to print the results of the .replace() method to the terminal.
 */
