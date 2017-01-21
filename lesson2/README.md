@@ -9,7 +9,7 @@ Let's take a look at the main difference between Node.js and JavaScript.
 
 Node'js and browser JavaScript differ when it comes to globals.
 
-![global][global.jpg]
+![global](global.jpg)
 
 ### Node.js Global Objects
 
