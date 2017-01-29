@@ -27,7 +27,10 @@ You can ask any questions about this course on Slack.
 http://learnteachcode.slack.com (channel: javascript-kr)
 
 ## Schedule
-- [1st Meetup on Jan 14](https://www.meetup.com/Learn-To-Code-Seoul/events/236563042/)
+- [1st Meetup on Jan 14](https://www.meetup.com/Learn-Teach-Code-Seoul/events/236563042/)
+- [2nd Meetup on Jan 21](https://www.meetup.com/Learn-Teach-Code-Seoul/events/236918324/)
+- [3rd Meetup on Feb 4](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237089471/)
+- [4th Meetup on Feb 11](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237283260/)
 
 > To be updated as I work on the lesson details
 
