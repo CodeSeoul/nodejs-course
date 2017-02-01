@@ -4,7 +4,7 @@
 
 ## What is a Callback?
 
-Callback is an asynchronous equivalent for a function. 
+Callback is an asynchronous equivalent for a function.
 - A callback function is called at the completion of a given task.
 - Can be passed to another function as a parameter to be called later.
 - Node.js makes heavy use of callbacks.
@@ -90,13 +90,26 @@ fs.readFile('ltcs.txt', function(err, data) {
 
 ## Getting information of a file
 
+### Syntax
+
+```js
+fs.stat(path, callback)
 ```
-// TODO using fs.stat()
+
+### Example
+
+```js
+fs.stat('ltcs.txt', function(err, stats) {
+	if (err) {
+		console.log(err);
+	}
+	console.log(stats);
+})
 ```
 
 ## Synchronous vs Asynchronous
-- Every method in the fs module has synchronous as well as asynchronous forms. 
-- Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error. 
+- Every method in the fs module has synchronous as well as asynchronous forms.
+- Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error.
 - It is better to use an asynchronous method instead of a synchronous method, as the former never blocks a program during its execution, whereas the second one does.
 - Asynchronous programming will likely take some time to grasp and master.
 - It requires a paradigm shift in terms of thinking about how application logic should execute.
