@@ -1,1 +1,7 @@
-console.log(process.argv);
+var http = require('http');
+
+var server = http.createServer(function (req, res){
+  res.end('Hello world');
+});
+
+server.listen(3000);
