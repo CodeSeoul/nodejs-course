@@ -14,13 +14,14 @@ with your first and last name and country name as the arguments.
 function getFullName(first, last, country) {
   var eastCountries = ['KR', 'CH', 'JP'];
   var westContrries = ['US', 'CA', 'UK'];
+  country = country.toUpperCase();
 
   if (eastCountries.indexOf(country) > -1) {
     return last + ' ' + first;
   } else if (westContrries.indexOf(country) > -1) {
     return first + ' ' + last;
   } else {
-    return 'Invalid country!'
+    throw new Error('Invalid country!');
   }
 }
 
