@@ -136,6 +136,86 @@ console.log(currency.usToCanadian(30));
 ```
 
 
+## Modularizing current application
+
+### Before
+
+- [rectangle-after.js](rectangle-after.js)
+
+```js
+var rectangle = {
+	perimeter: function (length, width) {
+    return 2 * (length + width);
+	},
+	area: function (length, width) {
+    return length * width;
+	}
+};
+
+function solveRectangle(length, width) {
+  console.log("Solving for rectangle with length = " + length + " and width = " + width);
+  
+  if (length < 0 || width < 0) {
+    console.log("Rectangle dimensions should be greater than zero");
+  } else {
+  	console.log("The area:", rectangle.area(length, width));
+  	console.log("The perimeter:" + rectangle.perimeter(length, width));
+  }
+}
+```
+
+
+### After
+
+- [rectangle-1.js](rectangle-1.js)
+
+```js
+var rectangle = {
+	perimeter: function (length, width) {
+    return 2 * (length + width);
+	},
+	area: function (length, width) {
+    return length * width;
+	}
+};
+
+module.exports = rectangle;
+```
+
+- [rectangle-2.js](rectangle-2.js)
+
+```js
+var perimeter = function (length, width) {
+  return 2 * (length + width);
+};
+
+var area = function (length, width) {
+  return length * width;
+};
+
+exports.perimeter = perimeter;
+exports.area = area;
+```
+
+- [rectangle-after.js](rectangle-after.js)
+
+```js
+var rectangle = require('./rectangle-1');
+// var rectangle = require('./rectangle-2');
+
+function solveRectangle(length, width) {
+  console.log("Solving for rectangle with length = " + length + " and width = " + width);
+  
+  if (length < 0 || width < 0) {
+    console.log("Rectangle dimensions should be greater than zero");
+  } else {
+  	console.log("The area:", rectangle.area(length, width));
+  	console.log("The perimeter:" + rectangle.perimeter(length, width));
+  }
+}
+```
+
+
 ## NPM (Node Package Manager)
 
 The Node Package Manager is a utility that comes bundled with Node.js.
@@ -197,7 +277,7 @@ $ npm install --save connect
 
 ## Challenges
 
-- [Highfive](challenges/high_five.js)
+- [Highfive](challenges/highfive.js)
 - [LogLevel](challenges/logger.js)
 - Installing Local Modules
 	: Practice using NPM by installing the npm module `underscore` using the `npm` command.

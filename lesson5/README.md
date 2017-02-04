@@ -5,6 +5,7 @@
 ## What are Streams?
 
 Streams can be readable, writable, or *both* using buffers (a sort of queue or a byte array) in memory.
+We can process data while still receiving it. The feature is useful for extra large datasets such as video or database migration.
 
 ### Anology
 
