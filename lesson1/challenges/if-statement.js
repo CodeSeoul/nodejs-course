@@ -6,6 +6,7 @@ if the length of the value of fruit is greater than five.
 Otherwise, print "The fruit name has five characters or less."
 */
 var fruit = "orange";
+
 function checkLength(someString){
   if(someString.length > 5){
     return("String is longer than 5 with a " + someString.length + " length");
