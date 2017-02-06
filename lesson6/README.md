@@ -354,6 +354,26 @@ fs.stat(path, (err, stat) => {
 });
 ```
 
+## Nodemon
+
+**Keep your server running even while developing**
+
+Nodemon will watch the files in the directory in which Nodemon was started, and if any files change, nodemon will automatically restart your node application.
+
+### Installation
+
+```bash
+$ npm install -g nodemon
+```
+
+### Usage
+
+Use `nodemon` instead of `node` when you start your app.
+
+```
+$ nodemon app.js
+```
+
 ## Challenges
 
 - Build a RESTful web service for a to-do app
