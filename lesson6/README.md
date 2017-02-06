@@ -354,9 +354,9 @@ fs.stat(path, (err, stat) => {
 });
 ```
 
-## Nodemon
+## Tip: Nodemon
 
-**Keep your server running even while developing**
+**Keep your server running even while developing it!**
 
 Nodemon will watch the files in the directory in which Nodemon was started, and if any files change, nodemon will automatically restart your node application.
 
