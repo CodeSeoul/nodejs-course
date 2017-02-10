@@ -114,26 +114,31 @@ fs.stat('ltcs.txt', function(err, stats) {
 - Asynchronous programming will likely take some time to grasp and master.
 - It requires a paradigm shift in terms of thinking about how application logic should execute.
 
-[syncVsAsync.js.js](syncVsAsync.js.js)
+[syncVsAsync.js](syncVsAsync.js)
 ```js
-var fs = require('fs');
+var data;
+try {
+  data = fs.readFileSync(filename);
+  console.log("Synchronous data:" + data.toString());
+} catch (e) {
+  console.log("Synchronous error:", e);
+}
 
-fs.readFile('ltcs.txt', function(err, data) {
-   console.log("Asynchronous read: " + data.toString());
+fs.readFile(filename, function(err, data) {
+  if (err) {
+    console.log("Asynchronous error:", err);
+  } else {
+    console.log("Asynchronous data:", data.toString());
+  }
 });
-
-var data = fs.readFileSync('ltcs.txt');
-console.log("Synchronous read: " + data.toString());
-
-console.log("Program Ended");
 ```
 
 Run
 ```bash
 $ node syncVsAsync.js
-Synchronous read: Learn Teach Code Seoul
+Synchronous data:Learn Teach Code Seoul
 Program Ended
-Asynchronous read: Learn Teach Code Seoul
+Asynchronous data: Learn Teach Code Seoul
 ```
 
 ## Blocking vs Non-blocking
@@ -193,6 +198,9 @@ The first argument is for an error, should one occur, and the second argument is
 ## Tip: Taming Callbacks in Node.js
 
 Programmers unfamiliar with JavaScript, who work with Java or PHP, might be surprised when they see Node.js code described on [Callback Hell](http://callbackhell.com).
+
+## References
+- [Node.js File System Documentation](https://nodejs.org/dist/latest-v7.x/docs/api/fs.html)
 
 ## Challenges
 

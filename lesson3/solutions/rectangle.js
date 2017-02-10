@@ -27,7 +27,7 @@ function rectangle(length, width, callback) {
   } catch (error) {
     callback(error, null);
   }
-};
+}
 
 function sloveRectangle(err, result) {
   if (err) {

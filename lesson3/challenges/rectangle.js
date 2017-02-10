@@ -2,12 +2,10 @@
 Complete the the function named "sloveRectangle" so it can print as follows.
 
 $ rectangle(2, 4, sloveRectangle);
-- The area: 8
-- The perimeter:12
+- The area: 8 - The perimeter: 12
 
 $ rectangle(3, 5, sloveRectangle);
-- The area: 15
-- The perimeter:16
+- The area: 15 - The perimeter: 16
 
 $ rectangle(-3, -5, sloveRectangle);
 - Error : Rectangle dimensions should be greater than zero
@@ -29,7 +27,7 @@ function rectangle(length, width, callback) {
   } catch (error) {
     callback(error, null);
   }
-};
+}
 
 function sloveRectangle(err, result) {
   // To be implemented
