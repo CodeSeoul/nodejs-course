@@ -13,8 +13,12 @@ The challenge:
   An example of using Math.round():
     Math.round(0.5);
 
-  Define a second variable named 'rounded' that references the output of the Math.round() method, 
+  Define a second variable nmaed 'rounded' that references the output of the Math.round() method,
   passing in the roundUp variable as the argument.
 
   Use console.log() to print that number to the terminal.
 */
+
+var roundUp = Math.round(0.5);
+
+console.log(roundUp);

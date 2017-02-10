@@ -25,3 +25,10 @@ The challenge:
 
   Use console.log() to print the filtered array to the terminal.
 */
+
+
+var pets = ['cat', 'dog', 'elephant'];
+
+var filtered = pets.filter(function(pet) {
+    return (pet !== 'elephant');
+});
