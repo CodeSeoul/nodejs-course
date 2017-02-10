@@ -1,5 +1,5 @@
 // Copy contents from hello.html to hello-copy.html
-var fs = require('fs')
+var fs = require('fs');
 
 // 1. Do this synchronously first
 

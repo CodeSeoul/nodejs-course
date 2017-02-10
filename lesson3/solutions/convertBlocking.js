@@ -3,6 +3,10 @@
 
 var fs = require('fs');
 
-fs.readFile('html.html', function(error, contents) {
-  console.log(contents.toString());
+fs.readFile('hello.html', function(error, contents) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(contents.toString());
+  }
 });

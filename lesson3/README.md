@@ -1,6 +1,83 @@
-# Lesson 3: File I/O
+# Lesson 3: File I/O (feat. Buffer)
 
 > Built-in fs module which provides filesystem-related functionality
+
+
+## CLI To-do Application
+
+How about building a simple to-do Application which provides command line interface?
+
+- [tasks.js](challenges/tasks.js)
+
+
+## Why do we need files?
+
+- Variables are volatile because they stay in the memory.
+- All the data stored in variables are gone when we shut down the application or turn off the computer.
+- However, files **keep** data until we update them.
+
+
+## How to import the required module
+
+The Node.js File System (fs) module can be imported using the following syntax.
+```js
+var fs = require('fs');
+```
+
+
+## Writing a File
+
+### Syntax
+```js
+fs.writeFile(file, data, callback)
+```
+
+### Example
+```js
+fs.writeFile('ltcs.txt', 'Learn Teach Code Seoul', function(err) {
+   console.log("Data written successfully!");
+});
+```
+
+
+## Reading a file
+
+### Syntax
+```js
+fs.readFile(file, callback)
+```
+
+### Example
+Need error handling
+```js
+fs.readFile('ltcs.txt', function(err, data) {
+	if (err) {
+   console.log(err);
+	}
+  console.log(data.toString());
+});
+```
+
+
+## Getting information of a file
+
+### Syntax
+
+```js
+fs.stat(path, callback)
+```
+
+### Example
+
+```js
+fs.stat('ltcs.txt', function(err, stats) {
+	if (err) {
+		console.log(err);
+	}
+	console.log(stats);
+})
+```
+
 
 ## What is a Callback?
 
@@ -8,6 +85,7 @@ Callback is an asynchronous equivalent for a function.
 - A callback function is called at the completion of a given task.
 - Can be passed to another function as a parameter to be called later.
 - Node.js makes heavy use of callbacks.
+
 
 ### JavaScript Recall: setTimeout(function, milliseconds, param1, param2, ...)
 
@@ -28,6 +106,7 @@ I execute first.
 I execute next.
 I execute last.
 ```
+
 
 ### What about Node.js
 
@@ -50,62 +129,6 @@ Hey~
 Hello, Dale !
 ```
 
-## How to import the required module
-The Node.js File System (fs) module can be imported using the following syntax.
-```js
-var fs = require('fs');
-```
-
-## Writing a File
-
-### Syntax
-```js
-fs.writeFile(file, data, callback)
-```
-
-### Example
-```js
-fs.writeFile('ltcs.txt', 'Learn Teach Code Seoul', function(err) {
-   console.log("Data written successfully!");
-});
-```
-
-## Reading a file
-
-### Syntax
-```js
-fs.readFile(file, callback)
-```
-
-### Example
-Need error handling
-```js
-fs.readFile('ltcs.txt', function(err, data) {
-	if (err) {
-   console.log(err);
-	}
-  console.log(data.toString());
-});
-```
-
-## Getting information of a file
-
-### Syntax
-
-```js
-fs.stat(path, callback)
-```
-
-### Example
-
-```js
-fs.stat('ltcs.txt', function(err, stats) {
-	if (err) {
-		console.log(err);
-	}
-	console.log(stats);
-})
-```
 
 ## Synchronous vs Asynchronous
 - Every method in the fs module has synchronous as well as asynchronous forms.
@@ -114,27 +137,33 @@ fs.stat('ltcs.txt', function(err, stats) {
 - Asynchronous programming will likely take some time to grasp and master.
 - It requires a paradigm shift in terms of thinking about how application logic should execute.
 
-[syncVsAsync.js.js](syncVsAsync.js.js)
+[syncVsAsync.js](syncVsAsync.js)
 ```js
-var fs = require('fs');
+var data;
+try {
+  data = fs.readFileSync(filename);
+  console.log("Synchronous data:" + data.toString());
+} catch (e) {
+  console.log("Synchronous error:", e);
+}
 
-fs.readFile('ltcs.txt', function(err, data) {
-   console.log("Asynchronous read: " + data.toString());
+fs.readFile(filename, function(err, data) {
+  if (err) {
+    console.log("Asynchronous error:", err);
+  } else {
+    console.log("Asynchronous data:", data.toString());
+  }
 });
-
-var data = fs.readFileSync('ltcs.txt');
-console.log("Synchronous read: " + data.toString());
-
-console.log("Program Ended");
 ```
 
 Run
 ```bash
 $ node syncVsAsync.js
-Synchronous read: Learn Teach Code Seoul
+Synchronous data:Learn Teach Code Seoul
 Program Ended
-Asynchronous read: Learn Teach Code Seoul
+Asynchronous data: Learn Teach Code Seoul
 ```
+
 
 ## Blocking vs Non-blocking
 
@@ -184,15 +213,22 @@ color = 'red';
 The color is blue
 ```
 
+
 ## Tip: The Node.js convention for asynchronous callbacks
 
 Most Node.js built-in modules use callbacks with two arguments.
 
 The first argument is for an error, should one occur, and the second argument is for the results.
 
+
 ## Tip: Taming Callbacks in Node.js
 
 Programmers unfamiliar with JavaScript, who work with Java or PHP, might be surprised when they see Node.js code described on [Callback Hell](http://callbackhell.com).
+
+
+## References
+- [Node.js File System Documentation](https://nodejs.org/dist/latest-v7.x/docs/api/fs.html)
+- [Node.js Buffer Documentation](https://nodejs.org/dist/latest-v7.x/docs/api/buffer.html)
 
 ## Challenges
 
