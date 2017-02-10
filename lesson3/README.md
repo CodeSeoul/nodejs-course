@@ -12,9 +12,9 @@ How about building a simple to-do Application which provides command line interf
 
 ## Why do we need files?
 
-- Variables are volatile because they stay in the memory.
+- Variables are volatile because they stay on the memory.
 - All the data stored in variables are gone when we shut down the application or turn off the computer.
-- However, files **keep** data until we update them.
+- However, files **keep** data until we update them because they stay on the disk.
 
 
 ## How to import the required module
