@@ -18,3 +18,6 @@ The challenge:
 
   Use console.log() to print that number to the terminal.
 */
+var roundUp=1.5;
+ var rounded=Math.round(roundUp);
+ console.log(rounded);
