@@ -3,5 +3,10 @@
 
 var fs = require('fs');
 
-var contents = fs.readFileSync('hello.html');
-console.log(contents.toString());
+var contents;
+try {
+  contents = fs.readFileSync('hello.html');
+  console.log(contents.toString());
+} catch (e) {
+  console.log(e);
+}

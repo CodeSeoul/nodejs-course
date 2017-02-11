@@ -11,6 +11,10 @@ var left = Number(process.argv[2]);
 var operator = process.argv[3];
 var right = Number(process.argv[4]);
 
+if (operators.indexOf(operator) == -1) {
+	throw new Error('Invalid operator!');
+}
+
 if (isNaN(left) || isNaN(right)) {
 	throw new Error('Invalid operands!');
 }
