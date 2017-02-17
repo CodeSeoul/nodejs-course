@@ -34,13 +34,13 @@ function listTasks() {
 
 function clearTasks() {
   tasks = [];
-  console.log('Cleaned up all the tasks. (' + tasks.length + ' tasks)');
+  console.log(`Cleared up the tasks. (${tasks.length} tasks)`);
 }
 
 function addTask() {
   let task = process.argv.splice(3).join(' ');
   tasks.push(task);
-  console.log('Added the given task. (' + tasks.length + ' tasks)');
+  console.log(`Added the given task. (${tasks.length} tasks)`);
 }
 
 function help() {
