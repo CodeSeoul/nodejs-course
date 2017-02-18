@@ -33,6 +33,13 @@ function rectangle(length, width, callback) {
 
 function sloveRectangle(err, result) {
   // To be implemented
+  if (err) {
+    console.log(err.message);
+  } else {
+    // console.log(`- length: ${length}, width: ${width}`)
+    console.log(`- The area : ${result.area()}`);
+    console.log(`- The perimeter : ${result.perimeter()}`);
+  }
 }
 
 // Test

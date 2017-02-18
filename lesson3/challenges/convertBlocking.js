@@ -3,5 +3,9 @@
 
 var fs = require('fs');
 
-var contents = fs.readFileSync('hello.html');
-console.log(contents.toString());
+// var contents = fs.readFileSync('hello.html');
+// console.log(contents.toString());
+
+fs.readFile('hello.html','utf-8', (err, data) => {
+  console.log(data);
+});
