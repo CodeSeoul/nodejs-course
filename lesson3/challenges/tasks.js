@@ -4,7 +4,7 @@ $ node tasks.js clear
 $ node tasks.js add <task>
 */
 
-let tasks = ["Eat.","Sleep.","Play."];
+let tasks = initialData();
 let command = process.argv[2];
 
 switch (command) {
@@ -21,6 +21,13 @@ switch (command) {
     help();
 }
 
+function initialData() {
+ fs.readFile('tasks.txt', (file) => {
+   tasks = file.toString().split('\n');
+ });
+ return  
+}
+
 function listTasks() {
   if (tasks.length === 0) {
     console.log('Found no tasks.');
@@ -35,12 +42,14 @@ function listTasks() {
 function clearTasks() {
   tasks = [];
   console.log(`Cleared up the tasks. (${tasks.length} tasks)`);
+  fs.writeFile('tasks.txt', '');
 }
 
 function addTask() {
   let task = process.argv.splice(3).join(' ');
   tasks.push(task);
   console.log(`Added the given task. (${tasks.length} tasks)`);
+  fs.writeFile('tasks.txt', tasks.join('\n'));
 }
 
 function help() {
