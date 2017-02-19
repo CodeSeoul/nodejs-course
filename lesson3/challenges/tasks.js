@@ -11,14 +11,13 @@ const defaultContents = '[]';
 let tasks;
 
 try {
-  tasks = fs.readFileSync(targetFile, 'utf-8')
+  tasks = parseFile(targetFile);
 } catch (e) {
   fs.writeFileSync(targetFile, defaultContents, 'utf8', (err) => {
     console.log(err);
   })
-  tasks = fs.readFileSync(targetFile, 'utf-8');
+  tasks = parseFile(targetFile);
 }
-tasks = JSON.parse(tasks);
 
 let command = process.argv[2];
 
@@ -36,6 +35,9 @@ switch (command) {
     help();
 }
 
+function parseFile(fileName){
+  return JSON.parse(fs.readFileSync(fileName, 'utf-8'));
+}
 
 function listTasks() {
   if (tasks.length === 0) {
