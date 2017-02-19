@@ -32,7 +32,14 @@ function rectangle(length, width, callback) {
 };
 
 function sloveRectangle(err, result) {
-  // To be implemented
+  if(err) 
+  console.log(err.message); 
+ 
+   else {
+      console.log("The area is "+result.area());
+      console.log("The perimeter is "+result.perimeter());
+    }
+  
 }
 
 // Test

@@ -15,8 +15,6 @@ function getFullName(first,last,country){
 	return(first+" "+last);
 	else
 		return(last+" "+first);	
-
-
 };
 console.log(getFullName("Dale", "Seo", "KR"));
 console.log(getFullName("Dale", "Seo", "US"));
