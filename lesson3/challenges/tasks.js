@@ -38,7 +38,7 @@ function clearTasks() {
 }
 
 function addTask() {
-  let task = process.argv.splice(3).join(' ');
+  let task = process.argv.slice(3).join(' ');
   tasks.push(task);
   console.log(`Added the given task. (${tasks.length} tasks)`);
 }

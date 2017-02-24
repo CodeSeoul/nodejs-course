@@ -205,10 +205,12 @@ The color is red
 Instead, pass the variable as a parameter for the function to handle it as a a local variable
 
 ```js
-color = 'blue';
-setTimeout((color) => {
-	console.log('The color is ' + color)
-}, 1000, color)
+let color = 'blue';
+
+setTimeout(function(c) {
+    console.log('The color is ' + c);
+}, 1000, color);
+
 color = 'red';
 ```
 
