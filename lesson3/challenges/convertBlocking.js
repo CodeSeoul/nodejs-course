@@ -4,9 +4,16 @@
 var fs = require('fs');
 
 var contents;
-try {
-  contents = fs.readFileSync('hello.html');
-  console.log(contents.toString());
-} catch (e) {
-  console.log(e);
-}
+// try {
+//   contents = fs.readFileSync('hello.html');
+//   console.log(contents.toString());
+// } catch (e) {
+//   console.log(e);
+// }
+fs.readFile('hello.html', function(err, contents){
+  if(err){
+    console.log(err);
+  }else{
+    console.log(contents.toString());
+  }
+})
