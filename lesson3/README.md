@@ -131,6 +131,9 @@ Hello, Dale !
 
 
 ## Synchronous vs Asynchronous
+
+![php-node](php-node.jpg)
+
 - Every method in the fs module has synchronous as well as asynchronous forms.
 - Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error.
 - It is better to use an asynchronous method instead of a synchronous method, as the former never blocks a program during its execution, whereas the second one does.
@@ -202,10 +205,12 @@ The color is red
 Instead, pass the variable as a parameter for the function to handle it as a a local variable
 
 ```js
-color = 'blue';
-setTimeout((color) => {
-	console.log('The color is ' + color)
-}, 1000, color)
+let color = 'blue';
+
+setTimeout(function(c) {
+    console.log('The color is ' + c);
+}, 1000, color);
+
 color = 'red';
 ```
 
@@ -404,6 +409,25 @@ For example:
 
 In this example, I copied the "korean" buffer, which contains a 6 byte long character, to the "greeting" buffer, to which I had written to the first 5 bytes. Because the snowman character is 6 bytes long, the result takes up 11 bytes of the buffer.
 
+#### buffer.slice(start, end=buffer.length)
+
+This method's API is generally the same as that of Array.prototype.slice, but with one very import difference:
+The slice is not a new buffer and merely references a subset of the memory space.
+Modifying the slice will also modify the original buffer! For example:
+
+```js
+> var greeting = new Buffer('Hello안녕');
+> var subset = greeting.slice(5, 8);
+> subset.toString();
+'안'
+> subset.write('___');
+3
+> subset.toString();
+'___'
+> greeting.toString();
+'Hello___녕'
+```
+
 
 ## Tip: The Node.js convention for asynchronous callbacks
 
@@ -418,11 +442,13 @@ Programmers unfamiliar with JavaScript, who work with Java or PHP, might be surp
 
 
 ## References
-- [Node.js File System Documentation](https://nodejs.org/dist/latest-v7.x/docs/api/fs.html)
-- [Node.js Buffer Documentation](https://nodejs.org/dist/latest-v7.x/docs/api/buffer.html)
+- [Node.js  Documentation - File System](https://nodejs.org/dist/latest-v7.x/docs/api/fs.html)
+- [Node.js Documentation - Buffer](https://nodejs.org/dist/latest-v7.x/docs/api/buffer.html)
+- [How to Use Buffers in Node.js](https://docs.nodejitsu.com/articles/advanced/buffers/how-to-use-buffers/)
 
 ## Challenges
 
 - [Convert Blocking](challenges/convertBlocking.js)
 - [Copy File](challenges/copyFile.js)
 - [Rectangle](challenges/rectangle.js)
+- [CLI ToDo App](challenges/tasks.js)

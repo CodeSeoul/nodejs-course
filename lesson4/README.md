@@ -21,9 +21,9 @@ The browser triggers events and we can listen for them.
 
 ### How to use
 - All objects that emit events are instances of the `EventEmitter` class.
-- These objects expose an `eventEmitter.on()` function that allows one or more functions to be attached to named events emitted by the object. 
+- These objects expose an `eventEmitter.on()` function that allows one or more functions to be attached to named events emitted by the object.
 - Typically, event names are camel-cased strings but any valid JavaScript property key can be used. (except for "error")
-- When the `EventEmitter` object emits an event, all of the functions attached to that specific event are called *synchronously*. 
+- When the `EventEmitter` object emits an event, all of the functions attached to that specific event are called *synchronously*.
 - Any values returned by the called listeners are ignored and will be discarded.
 
 ### The `EventEmitter` class in `events` module
@@ -33,7 +33,7 @@ Events are handled throught the use of listeners.
 A listener is the association of an event with a callback function that gets triggered each time the event occurs.
 
 - `emitter.on(eventName, listener)`: Attaches the `listener` function for the event named `eventName`.
-- `emitter.emit(eventName[, ...args])`: Triggers each of the listeners registered for the event named `eventName`, passing the supplied arguments to each. Returns true if the event had listeners, false otherwise.
+- `emitter.emit(eventName[, ...args])`: Triggers each of the listeners registered for the event named `eventName`, passing the supplied arguments to each. Returns `true` if the event had listeners, `false` otherwise.
 - `emitter.eventNames()`: Returns an array listing the events for which the emitter has registered listeners.
 - `emitter.listeners(eventName)`: Returns a copy of the array of listeners for the event named eventName.
 - `emitter.listenerCount(eventName)`: Returns a copy of the array of listeners for the event named eventName.
@@ -102,11 +102,12 @@ server.on('close', function(req, res) { ... });
 ```
 
 ## Event-Driven Programming
-In an event-driven application, there is generally a main loop that listens for events, 
+
+In an event-driven application, there is generally a main loop that listens for events,
 and then triggers a callback function when one of those events is detected.
+
 ![Event Loop](event_loop.jpg)
 
 ## Challenges
 - [Chat Emitter](challenges/chatEmitter.js)
 - [Refactor HTTP server](challenges/refactorHttpServer.js)
-

@@ -39,7 +39,7 @@ function listTasks() {
 function clearTasks() {
   let tasks = [];
   saveTasks(tasks);
-  console.log('Cleaned up all the tasks. (' + tasks.length + ' tasks)');
+  console.log(`Cleared up the tasks. (${tasks.length} tasks)`);
 }
 
 function addTask() {
@@ -47,7 +47,7 @@ function addTask() {
   loadTasks((tasks) => {
     tasks.push(task);
     saveTasks(tasks);
-    console.log('Added the given task. (' + tasks.length + ' tasks)');
+    console.log(`Added the given task. (${tasks.length} tasks)`);
   });
 }
 

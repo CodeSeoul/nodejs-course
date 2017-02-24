@@ -1,7 +1,7 @@
 function plus(a, b) {
 	console.log(a, '+', b);
 	return a + b;
-};
+}
 
 var minus = function(a, b) {
 	console.log(a, '-', b);
@@ -11,7 +11,7 @@ var minus = function(a, b) {
 function calculate(a, b, callback) {
 	console.log('calculating...');
 	return callback(a, b);
-};
+}
 
 var plusResult = calculate(5, 2, plus);
 var minusResult = calculate(5, 2, minus);
