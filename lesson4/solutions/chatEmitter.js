@@ -6,7 +6,7 @@ var chat = new EventEmitter();
 // 2. Create a callback function named 'logMessage' to log the given 'message' argument to the console using console.log().
 var logMessage = function(message) {
   console.log(message);
-}
+};
 
 // 3. Listen for the 'message' event on our new chat object. Remember to add a callback that accepts the message parameter.
 chat.on('message', logMessage);
