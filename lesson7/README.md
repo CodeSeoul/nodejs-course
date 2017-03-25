@@ -140,7 +140,7 @@ console.log(currency.usToCanadian(30));
 
 ### Before
 
-- [rectangle-after.js](rectangle-after.js)
+- [rectangle-before.js](rectangle-before.js)
 
 ```js
 var rectangle = {
@@ -154,7 +154,7 @@ var rectangle = {
 
 function solveRectangle(length, width) {
   console.log("Solving for rectangle with length = " + length + " and width = " + width);
-  
+
   if (length < 0 || width < 0) {
     console.log("Rectangle dimensions should be greater than zero");
   } else {
@@ -205,7 +205,7 @@ var rectangle = require('./rectangle-1');
 
 function solveRectangle(length, width) {
   console.log("Solving for rectangle with length = " + length + " and width = " + width);
-  
+
   if (length < 0 || width < 0) {
     console.log("Rectangle dimensions should be greater than zero");
   } else {
@@ -220,66 +220,176 @@ function solveRectangle(length, width) {
 
 The Node Package Manager is a utility that comes bundled with Node.js.
 
-It allows you to easily install third-party modules and globally publish any Node.js modules you yourself create.
+It allows you to easily install third-party packages and globally publish any Node.js packages you yourself create.
 
-## Finding modules
+```
+$ npm --version
+$ npm help
+```
+
+
+## Searching for npm packages
 
 - Website (http://npmjs.org)
 
-## Installing a NPM Module
 
-Install into the local *node_modules* directory
+## Installing NPM packages
+
+Install a package into your *node_modules* directory using `npm install <package>`:
 
 ```bash
-$ npm install request
+$ npm install lodash
+$ ls node_modules
+lodash
 ```
 
-Load from the lccal *mode_modules* directory
 
-```js
-var request = require('request');
+## Uninstalling NPM packages
+
+Remove a package from your *node_modules* directory using `npm uninstall <package>`:
+
+```bash
+$ npm uninstall lodash
+$ ls node_modules
 ```
 
-## Specifing Dependencies
 
-Application dependencies are specified using a `package.json` file also known as a package descriptor file.
+## Installing/Uninstalling packages globally
+
+To download packages globally, you simply use the command `npm install -g <package>`, e.g.:
+
+```bash
+$ npm install -g standard
+$ npm uninstall -g standard
+```
+
+
+## Using a **package.json**
+
+A `package.json` file is also known as a package descriptor file.
 
 This file is always placed in an application's root directory and specify the name of your application, the version and a description of what the application does as well as the application's dependencies.
 
+A `package.json` file affords you a lot of great things:
+
+- It serves as documentation for what packages your project depends on.
+- It allows you to specify the versions of a package that your project can use using [semantic versioning rules](https://docs.npmjs.com/getting-started/semantic-versioning).
+- Makes your build reproducible which means that its way easier to share with other developers.
+
+
+### Requirements
+
+As a bare minimum, a `package.json` must have:
+
+- "name"
+	- all lowercase
+	- one word, no spaces
+	- dashes and underscores allowed
+- "version"
+	- in the form of x.x.x
+	- follows [semver spec](https://docs.npmjs.com/getting-started/semantic-versioning)
+	- For example:
+
 ```js
 {
-  "name": "My App",
-  "version": "0.0.1",
-  "description": "Simple HTTP server"
+  "name": "my-awesome-package",
+  "version": "1.0.0"
+}
+```
+
+
+## Creating a package.json
+
+To create a package.json run:
+
+```bash
+> npm init
+```
+
+This will initiate a command line questionnaire that will conclude with the creation of a package.json in the directory you initiated the command.
+
+```bash
+> npm init --yes
+```
+
+This will ask no questions, and instead will generate a default package.json using information extracted from the current directory.
+
+## Specifying Packages
+
+To specify the packages your project depends on, you need to list the packages you'd like to use in your package.json file. There are 2 types of packages you can list:
+
+- "dependencies": these packages are required by your application in production
+- "devDependencies": these packages are only needed for development and testing
+
+
+### Manually editing your package.json
+
+The project below uses any version of the package `lodash` that matches major version 4 in production, and requires any version of the package `nodemon` that matches major version 1, but only for development:
+
+```js
+{
+  "name": "my_package",
+  "version": "1.0.0",
   "dependencies": {
-    "connect": "1.8.7"
+		"lodash": "^4.0.0"
+  },
+  "devDependencies" : {
+		"nodemon": "^1.0.0"
   }
 }
 ```
 
-NPM reads dependencies from package.json files and install each of them with a single command.
-
-Enter the following command in the root of your application directory.
+NPM reads dependencies from your `package.json` file and install each of them with a single command.
 
 ```bash
 $ npm install
+$ ls node_modules/
+lodash nodemon
 ```
 
 There should be a newly created `node_modules` directory which contains your application's dependencies.
 
-## Doing them at once
+### The --save and --save-dev install flags
 
-Install a module adding it to package.json at the same time
+The easier (and more awesome) way to add dependencies to your package.json is to do so from the command line, flagging the `npm install` command with either `--save` or `--save-dev`, depending on how you'd like to use that dependency.
+
+To add an entry to your `package.json`'s `dependencies`:
 
 ```bash
-$ npm install --save connect
+npm install <package_name> --save
 ```
+
+To add an entry to your `package.json`'s `devDependencies`:
+
+```bash
+npm install <package_name> --save-dev
+```
+
+
+## Run NPM scripts
+
+`npm run <script>` is used by the test, start or any other commands.
+
+```js
+"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  }
+```
+
+
+## Publishing NPM packages
+
+https://docs.npmjs.com/getting-started/publishing-npm-packages
 
 ## Challenges
 
 - [Highfive](challenges/highfive.js)
 - [LogLevel](challenges/logger.js)
 - Installing Local Modules
-	: Practice using NPM by installing the npm module `underscore` using the `npm` command.
+	: Practice using NPM by installing the npm module `lodash` using the `npm` command.
 - [Dependency](challenges/package.json)
 
+## Reference
+- https://docs.npmjs.com/
