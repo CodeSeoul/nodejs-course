@@ -17,8 +17,6 @@
 - [Lesson 5: Streams](/lesson5/)
 - [Lesson 6: HTTP](/lesson6/)
 - [Lesson 7: Modules](/lesson7/)
-- [Lesson 8: Express.js](/lesson8/)
-- [Lesson 9: Socket.io](/lesson9/)
 
 ## Slack
 
@@ -33,6 +31,7 @@ http://learnteachcode.slack.com (channel: javascript-kr)
 - [4th Meetup on Feb 11](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237283260/)
 - [5th Meetup on Feb 18](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237542927/)
 - [6th Meetup on Feb 25](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237777463/)
-
+- [7th Meetup on Mar 11](https://www.meetup.com/Learn-Teach-Code-Seoul/events/238081011/)
+- [8th Meetup on Mar 25](https://www.meetup.com/Learn-Teach-Code-Seoul/events/238428868/)
 
 > To be updated as I work on the lesson details
