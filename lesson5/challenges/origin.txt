@@ -1,11 +1,2 @@
-Apple
-Apricot
-Banana
-Grape
-Lemon
-Orange
-Pineapple
-Pomegranate
-Quince
-Raspberry
-Strawberry
+
+Finished
