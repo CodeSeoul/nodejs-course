@@ -33,5 +33,3 @@ http://learnteachcode.slack.com (channel: javascript-kr)
 - [6th Meetup on Feb 25](https://www.meetup.com/Learn-Teach-Code-Seoul/events/237777463/)
 - [7th Meetup on Mar 11](https://www.meetup.com/Learn-Teach-Code-Seoul/events/238081011/)
 - [8th Meetup on Mar 25](https://www.meetup.com/Learn-Teach-Code-Seoul/events/238428868/)
-
-> To be updated as I work on the lesson details
