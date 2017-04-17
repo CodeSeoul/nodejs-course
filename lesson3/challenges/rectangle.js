@@ -31,6 +31,11 @@ function rectangle(length, width, callback) {
 
 function sloveRectangle(err, result) {
   // To be implemented
+  if (err) {
+    console.log(err);
+    process.exit(1);
+  }
+  console.log(`- The area: ${area} - The perimeter: ${perimeter}`, result.area, result.perimeter);
 }
 
 // Test
